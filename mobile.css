@@ -1,0 +1,40 @@
+/* Mobile overrides. Pages are authored with inline styles; these rules adapt them for small screens.
+   Selectors match both the browser-serialized form ("prop: value") and the authored form ("prop:value"). */
+@media (max-width: 760px) {
+  html, body { overflow-x: hidden; }
+
+  [style*="justify-content: space-between; padding: 20px 48px"], [style*="justify-content:space-between; padding:20px 48px"] { flex-direction: column !important; align-items: flex-start !important; gap: 14px !important; padding: 14px 20px !important; }
+  [style*="justify-content: space-between; padding: 20px 48px"] > div:last-child, [style*="justify-content:space-between; padding:20px 48px"] > div:last-child { width: 100%; gap: 8px !important; justify-content: space-between !important; font-size: 14px !important; overflow-x: auto; flex-wrap: nowrap !important; padding-bottom: 2px; scrollbar-width: none; }
+  [style*="justify-content: space-between; padding: 20px 48px"] > div:last-child > a, [style*="justify-content:space-between; padding:20px 48px"] > div:last-child > a { flex: none; white-space: nowrap; }
+  [style*="justify-content: space-between; padding: 20px 48px"] img, [style*="justify-content:space-between; padding:20px 48px"] img { width: 42px !important; height: 42px !important; }
+  [style*="justify-content: space-between; padding: 20px 48px"] span span:first-child, [style*="justify-content:space-between; padding:20px 48px"] span span:first-child { font-size: 19px !important; }
+
+  [style*="padding: 72px 48px"], [style*="padding:72px 48px"], [style*="padding: 64px 48px"], [style*="padding:64px 48px"], [style*="padding: 56px 48px"], [style*="padding:56px 48px"] { padding: 44px 20px !important; }
+  [style*="padding: 72px 48px 0px"], [style*="padding:72px 48px 0px"], [style*="padding: 56px 48px 0px"], [style*="padding:56px 48px 0px"], [style*="padding:72px 48px 0"], [style*="padding:56px 48px 0"] { padding: 40px 20px 0 !important; }
+  [style*="padding: 0px 48px"], [style*="padding:0px 48px"], [style*="padding:0 48px"] { padding-left: 20px !important; padding-right: 20px !important; }
+  [style*="padding: 44px 48px"], [style*="padding:44px 48px"], [style*="padding: 36px;"], [style*="padding:36px;"], [style*="padding: 32px;"], [style*="padding:32px;"] { padding: 24px !important; }
+  [style*="padding: 48px;"], [style*="padding:48px;"] { padding: 32px 20px !important; }
+
+  [style*="grid-template-columns"] { grid-template-columns: minmax(0, 1fr) !important; gap: 24px !important; }
+  [style*="minmax(130px"] { grid-template-columns: repeat(auto-fill, minmax(96px, 1fr)) !important; gap: 22px 14px !important; }
+  [style*="minmax(130px"] img, [style*="minmax(130px"] [style*="width: 112px"] { width: 88px !important; height: 88px !important; }
+  [style*="grid-template-columns: 180px 160px 1fr"], [style*="grid-template-columns:180px 160px 1fr"] { grid-template-columns: auto 1fr !important; gap: 4px 16px !important; padding: 18px 20px !important; }
+  [style*="grid-template-columns: 180px 160px 1fr"] > :last-child, [style*="grid-template-columns:180px 160px 1fr"] > :last-child { grid-column: 1 / -1; }
+
+  [style*="display: flex"], [style*="display:flex"] { flex-wrap: wrap; }
+
+  h1 { font-size: 38px !important; line-height: 1.1 !important; }
+  h2 { font-size: 29px !important; }
+  [style*="font-size: 19px"], [style*="font-size:19px"] { font-size: 17px !important; }
+
+  [style*="left: -28px"], [style*="left:-28px"] { position: static !important; margin-top: 16px; box-shadow: none !important; }
+
+  [style*="padding: 48px; display: flex"], [style*="padding:48px; display:flex"] { flex-direction: column; align-items: flex-start !important; gap: 22px !important; }
+  [style*="padding: 48px; display: flex"] [style*="text-align: right"], [style*="padding:48px; display:flex"] [style*="text-align: right"], [style*="padding: 48px; display: flex"] [style*="text-align:right"], [style*="padding:48px; display:flex"] [style*="text-align:right"] { text-align: left !important; }
+
+  [style*="justify-content: space-between; align-items: center; gap: 40px"] > a, [style*="justify-content:space-between; align-items:center; gap:40px"] > a { width: 100%; text-align: center; box-sizing: border-box; }
+  [style*="justify-content: space-between; padding: 20px 48px"] > div:last-child > a:last-child,
+  [style*="justify-content:space-between; padding:20px 48px"] > div:last-child > a:last-child { padding: 6px 14px !important; }
+  [style*="justify-content: space-between; align-items: center; gap: 40px"] > div,
+  [style*="justify-content:space-between; align-items:center; gap:40px"] > div { flex: 1 1 100% !important; flex-wrap: wrap !important; }
+}
