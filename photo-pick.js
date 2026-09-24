@@ -54,7 +54,7 @@
         <style>
           :host { display:block; }
           .wrap { position:relative; width:100%; ${sizing} ${height === '100%' ? 'min-height:220px;' : ''} border-radius:${radius}; overflow:hidden; background:#EFE9DA; }
-          @media (max-width:760px) { .wrap { ${height && height !== '100%' ? 'height:min(' + height + ', 72vw);' : ''} border-radius:${parseInt(radius) > 0 ? '20px' : radius}; } .pill { opacity:1; pointer-events:auto; } }
+          @media (max-width:760px) { .wrap { ${height && height !== '100%' ? 'height:min(' + height + ', 72vw);' : ''} border-radius:${parseInt(radius) > 0 ? '20px' : radius}; } .pill { opacity:1 !important; pointer-events:auto !important; } }
           img { width:100%; height:100%; object-fit:cover; object-position:${pos}; display:block; }
           .ring { position:absolute; inset:0; border-radius:${radius}; pointer-events:none;
                   box-shadow: inset 0 0 0 3px transparent; transition:box-shadow .15s; }
