@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Missions · Mapleview Baptist Church</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+<script src="https://unpkg.com/d3@7.9.0/dist/d3.min.js" integrity="sha384-CjloA8y00+1SDAUkjs099PVfnY2KmDC2BZnws9kh8D/lX1s46w6EPhpXdqMfjK6i" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/topojson-client@3.1.0/dist/topojson-client.min.js" integrity="sha384-Ukv1p/xTma6P4/2bY5KzWBw+ydSpXmhCMtyciIQVDJ1RmOxtCYNMF1uXT9T63H67" crossorigin="anonymous"></script>
+<style>
+  body { margin: 0; background: #FCFAF4; color: #26241F; font-family: 'Source Sans 3', sans-serif; }
+  a { color: #2E6B45; text-decoration: none; }
+  a:hover { color: #7A5A33; }
+  #globe { touch-action: none; cursor: grab; display: block; width: 100%; height: auto; }
+  #globe.dragging { cursor: grabbing; }
+  .pin { cursor: pointer; }
+</style>
+</head>
+<body>
+
+<div style="display:flex; align-items:center; justify-content:space-between; padding:20px 48px; background:#FCFAF4; border-bottom:1px solid #ECE5D3;">
+  <a href="Home.dc.html" style="display:flex; align-items:center; gap:14px;">
+    <img src="assets/logo.png" alt="Mapleview tree logo" style="width:52px; height:52px;">
+    <span>
+      <span style="display:block; font-family:'DM Serif Display',serif; font-size:22px; color:#2E6B45; line-height:1.1;">Mapleview Baptist Church</span>
+      <span style="display:block; font-size:12.5px; color:#7A5A33; letter-spacing:0.08em; text-transform:uppercase;">Lakeside, California</span>
+    </span>
+  </a>
+  <div style="display:flex; align-items:center; gap:32px; font-size:16px; font-weight:600;">
+    <a href="About.dc.html" style="color:#3C3A33;">About</a>
+    <a href="Gatherings.dc.html" style="color:#3C3A33;">Gatherings</a>
+    <a href="Ministries.dc.html" style="color:#2E6B45; border-bottom:2px solid #2E6B45; padding-bottom:2px;">Ministries</a>
+    <a href="Sermons.dc.html" style="color:#3C3A33;">Sermons</a>
+    <a href="Give.dc.html" style="background:#7A5A33; color:#FCFAF4; padding:10px 22px; border-radius:999px;">Give</a>
+  </div>
+</div>
+
+<div style="background:#F4EEDF; padding:64px 48px;">
+  <div style="max-width:1320px; margin:0 auto;">
+    <a href="Ministries.dc.html" style="font-size:14px; font-weight:700; letter-spacing:0.14em; text-transform:uppercase; color:#4E9A5B;">Ministries</a>
+    <h1 style="font-family:'DM Serif Display',serif; font-size:54px; line-height:1.08; margin:14px 0 18px; font-weight:400; max-width:18ch; text-wrap:balance;">His love, one person at a time.</h1>
+    <p style="font-size:19px; line-height:1.6; color:#57544A; margin:0; max-width:60ch;">Mapleview supports missionaries serving near home and around the world. Spin the globe and tap a pin to meet them.</p>
+  </div>
+</div>
+
+<div style="max-width:1320px; margin:0 auto; padding:56px 48px; display:grid; grid-template-columns:minmax(0,1.1fr) minmax(0,1fr); gap:48px; align-items:start;">
+  <div style="background:#F4EEDF; border-radius:28px; padding:24px;">
+    <svg id="globe" viewBox="0 0 620 620" role="img" aria-label="Globe showing locations of supported missionaries"></svg>
+    <div style="display:flex; justify-content:space-between; align-items:center; margin-top:10px; font-size:13.5px; color:#7A5A33;">
+      <span>Drag to spin · tap a pin to read a bio</span>
+      <button id="reset" style="appearance:none; border:1.5px solid #D9CFB8; background:transparent; color:#2E6B45; font:700 13.5px 'Source Sans 3',sans-serif; padding:6px 16px; border-radius:999px; cursor:pointer;">Reset view</button>
+    </div>
+  </div>
+
+  <div>
+    <div id="bio" style="background:#FCFAF4; border:1px solid #ECE5D3; border-radius:24px; padding:32px; min-height:220px;"></div>
+    <div style="font-size:13px; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; color:#7A5A33; margin:32px 0 14px;">Everyone we support</div>
+    <div id="list" style="display:flex; flex-direction:column; gap:10px;"></div>
+  </div>
+</div>
+
+<div style="background:#2E6B45; color:#EAF3EC; padding:56px 48px;">
+  <div style="max-width:1320px; margin:0 auto; display:flex; justify-content:space-between; align-items:center; gap:40px; flex-wrap:wrap;">
+    <div>
+      <h2 style="font-family:'DM Serif Display',serif; font-size:32px; font-weight:400; margin:0 0 8px; color:#F7F3E9;">Support a missionary</h2>
+      <p style="font-size:17px; line-height:1.6; color:#C8DECF; margin:0;">Give toward the missions fund or write to a family serving overseas.</p>
+    </div>
+    <a href="Give.dc.html" style="flex:none; background:#F7F3E9; color:#2E6B45; font-weight:700; font-size:17px; padding:15px 30px; border-radius:999px;">Give to missions</a>
+  </div>
+</div>
+
+<div style="background:#26241F; color:#B8B2A3; padding:48px; display:flex; justify-content:space-between; align-items:center; gap:36px; flex-wrap:wrap;">
+  <div style="display:flex; align-items:center; gap:14px;">
+    <img src="assets/logo.png" alt="" style="width:42px; height:42px;">
+    <div style="font-size:15px; line-height:1.5;"><span style="font-family:'DM Serif Display',serif; font-size:18px; color:#F7F3E9;">Mapleview Baptist Church</span><br>13176 Mapleview St, Lakeside, CA 92040</div>
+  </div>
+  <div style="display:flex; gap:28px; font-size:15px; font-weight:600;">
+    <a href="About.dc.html" style="color:#B8B2A3;">About</a>
+    <a href="Gatherings.dc.html" style="color:#B8B2A3;">Gatherings</a>
+    <a href="Ministries.dc.html" style="color:#B8B2A3;">Ministries</a>
+    <a href="Sermons.dc.html" style="color:#B8B2A3;">Sermons</a>
+    <a href="Give.dc.html" style="color:#B8B2A3;">Give</a>
+  </div>
+  <div style="font-size:15px; text-align:right; line-height:1.6;">(619) 443-6467<br>office@mapleviewchurch.com</div>
+</div>
+
+<script>
+const PEOPLE = [
+  { id:'alvarez', cc:'mx', name:'The Alvarez Family', place:'Oaxaca, Mexico', coords:[-96.72, 17.07], since:'2014',
+    bio:'Placeholder bio. Rafael and Ana plant churches among villages in the Oaxacan highlands and train local pastors. They send a prayer letter each quarter.', pray:'Placeholder prayer request \u2014 health, language study, and new believers in two nearby villages.' },
+  { id:'whitfield', cc:'ke', name:'Grace & Tom Whitfield', place:'Nairobi, Kenya', coords:[36.82, -1.29], since:'2009',
+    bio:'Placeholder bio. Tom teaches at a pastors\u2019 college and Grace runs a literacy program for mothers in the Kibera neighborhood.', pray:'Placeholder prayer request \u2014 for the graduating class and for steady funding of the literacy program.' },
+  { id:'nguyen', cc:'th', name:'The Nguyen Family', place:'Chiang Mai, Thailand', coords:[98.98, 18.79], since:'2018',
+    bio:'Placeholder bio. Minh and Lien serve a student ministry at two universities and host a weekly meal for international students.', pray:'Placeholder prayer request \u2014 visa renewals and for students returning home after graduation.' },
+  { id:'bennett', cc:'al', name:'Sarah Bennett', place:'Tirana, Albania', coords:[19.82, 41.33], since:'2021',
+    bio:'Placeholder bio. Sarah works with a small church plant, leading a women\u2019s Bible study and teaching English in the neighborhood.', pray:'Placeholder prayer request \u2014 language fluency and for two women considering baptism.' },
+  { id:'okafor', cc:'ng', name:'The Okafor Family', place:'Lagos, Nigeria', coords:[3.38, 6.52], since:'2016',
+    bio:'Placeholder bio. Emeka and Chidi train church planters and distribute Scripture in three local languages.', pray:'Placeholder prayer request \u2014 safe travel between training sites and printing costs.' },
+  { id:'chen', cc:'tw', name:'David & Mei Chen', place:'Taipei, Taiwan', coords:[121.56, 25.03], since:'2012',
+    bio:'Placeholder bio. David pastors a bilingual congregation and Mei leads a ministry to young families in the city.', pray:'Placeholder prayer request \u2014 for new leaders to step into the family ministry.' },
+  { id:'rescue', cc:'us', name:'San Diego Rescue Mission', place:'San Diego, California', coords:[-117.16, 32.72], since:'2005',
+    bio:'Placeholder bio. A local partner serving neighbors experiencing homelessness. Mapleview teams serve meals on the second Saturday of each month.', pray:'Placeholder prayer request \u2014 for volunteers and for guests in the recovery program.' }
+];
+
+const svg = d3.select('#globe');
+const W = 620, R = 268, CX = 310, CY = 310;
+const projection = d3.geoOrthographic().scale(R).translate([CX, CY]).clipAngle(90);
+const path = d3.geoPath(projection);
+let rotation = [100, -12, 0];
+let selected = null;
+let spinning = true;
+
+const defs = svg.append('defs');
+const glow = defs.append('radialGradient').attr('id','sea').attr('cx','35%').attr('cy','30%');
+glow.append('stop').attr('offset','0%').attr('stop-color','#DCE9DE');
+glow.append('stop').attr('offset','100%').attr('stop-color','#C2D6C6');
+
+svg.append('circle').attr('cx',CX).attr('cy',CY).attr('r',R+14).attr('fill','rgba(46,107,69,0.07)');
+svg.append('circle').attr('cx',CX).attr('cy',CY).attr('r',R).attr('fill','url(#sea)');
+const gGrat = svg.append('path').attr('fill','none').attr('stroke','rgba(46,107,69,0.18)').attr('stroke-width',0.7);
+const gLand = svg.append('g');
+const gPins = svg.append('g');
+
+const graticule = d3.geoGraticule10();
+
+function renderLand(features) {
+  gLand.selectAll('path').data(features).join('path')
+    .attr('fill','#EFE6D2').attr('stroke','#C9BFA5').attr('stroke-width',0.6);
+}
+
+function draw() {
+  projection.rotate(rotation);
+  gGrat.attr('d', path(graticule));
+  gLand.selectAll('path').attr('d', path);
+
+  const center = [-rotation[0], -rotation[1]];
+  const pins = gPins.selectAll('g.pin').data(PEOPLE, d => d.id);
+  const enter = pins.enter().append('g').attr('class','pin').on('click', (e, d) => { if (!moved) select(d.id); });
+  enter.append('circle').attr('class','halo');
+  enter.append('circle').attr('class','dot');
+  enter.append('text').attr('class','label');
+
+  gPins.selectAll('g.pin').each(function(d) {
+    const g = d3.select(this);
+    const visible = d3.geoDistance(d.coords, center) < Math.PI / 2;
+    const [x, y] = projection(d.coords);
+    const on = selected === d.id;
+    g.attr('transform', 'translate(' + x + ',' + y + ')')
+     .style('display', visible ? null : 'none');
+    g.select('.halo').attr('r', on ? 30 : 24).attr('fill', on ? 'rgba(46,107,69,0.25)' : 'rgba(46,107,69,0.14)');
+    g.select('.dot').attr('r', on ? 18 : 15).attr('fill', on ? '#2E6B45' : '#4E9A5B').attr('stroke','#FCFAF4').attr('stroke-width',2);
+    g.select('.label').attr('y', 5).attr('text-anchor','middle')
+      .attr('font-family',"'Source Sans 3',sans-serif").attr('font-size', on ? 15 : 13)
+      .attr('font-weight',700).attr('fill','#FCFAF4').attr('pointer-events','none')
+      .text(d.name.replace('The ','').split(/[ &]/)[0].slice(0,2).toUpperCase());
+  });
+}
+
+function bioHTML(d) {
+  if (!d) return '<div style="font-family:\'DM Serif Display\',serif; font-size:24px; color:#2E6B45; margin-bottom:10px;">Meet our missionaries</div>'
+    + '<div style="font-size:16.5px; line-height:1.65; color:#57544A;">Tap a pin on the globe, or pick a name from the list below, to read about the family and how to pray for them.</div>';
+  return '<div style="display:flex; gap:16px; align-items:center; margin-bottom:16px;">'
+    + '<div style="width:56px; height:56px; flex:none; border-radius:999px; background:#4E9A5B; color:#F7F3E9; display:grid; place-items:center; font-weight:700; font-size:18px;">'
+    + d.name.replace('The ','').split(/[ &]/)[0].slice(0,2).toUpperCase() + '</div>'
+    + '<div><div style="display:flex; align-items:center; gap:10px; font-family:\'DM Serif Display\',serif; font-size:24px; color:#2E6B45; line-height:1.2;">' + '<img src="https://flagcdn.com/w80/' + d.cc + '.png" alt="" style="width:28px; height:20px; object-fit:cover; border-radius:4px; box-shadow:0 0 0 1px rgba(0,0,0,0.08); flex:none;">' + d.name + '</div>'
+    + '<div style="font-size:14.5px; font-weight:700; color:#7A5A33;">' + d.place + ' · supported since ' + d.since + '</div></div></div>'
+    + '<p style="font-size:16.5px; line-height:1.65; color:#57544A; margin:0 0 14px;">' + d.bio + '</p>'
+    + '<div style="background:#F4EEDF; border-radius:16px; padding:16px 18px; font-size:15.5px; line-height:1.6; color:#3C3A33;">'
+    + '<strong style="display:block; color:#2E6B45; font-size:13px; letter-spacing:0.1em; text-transform:uppercase; margin-bottom:6px;">Pray for them</strong>' + d.pray + '</div>';
+}
+
+function select(id) {
+  selected = (selected === id) ? null : id;
+  spinning = false;
+  const d = PEOPLE.find(p => p.id === selected);
+  document.getElementById('bio').innerHTML = bioHTML(d);
+  if (d) {
+    const target = [-d.coords[0], -d.coords[1], 0];
+    d3.transition().duration(900).tween('rot', () => {
+      const i = d3.interpolate(rotation, target);
+      return t => { rotation = i(t); draw(); };
+    });
+  }
+  renderList();
+  draw();
+}
+
+function renderList() {
+  const list = d3.select('#list');
+  list.selectAll('button').data(PEOPLE, d => d.id).join('button')
+    .attr('style', d => 'appearance:none; text-align:left; cursor:pointer; border:1px solid ' + (selected === d.id ? '#2E6B45' : '#ECE5D3')
+      + '; background:' + (selected === d.id ? '#F4EEDF' : '#FCFAF4') + '; border-radius:16px; padding:14px 18px; font-family:inherit; display:flex; justify-content:space-between; gap:14px; align-items:center;')
+    .on('click', (e, d) => select(d.id))
+    .html(d => '<span style="display:flex; align-items:center; gap:12px; font-size:16px; font-weight:700; color:#26241F;">' + '<img src="https://flagcdn.com/w80/' + d.cc + '.png" alt="" style="width:26px; height:19px; object-fit:cover; border-radius:4px; box-shadow:0 0 0 1px rgba(0,0,0,0.08); flex:none;">' + d.name + '</span>'
+      + '<span style="font-size:14.5px; color:#7A5A33;">' + d.place + '</span>');
+}
+
+document.getElementById('reset').addEventListener('click', () => {
+  selected = null;
+  spinning = false;
+  document.getElementById('bio').innerHTML = bioHTML(null);
+  renderList();
+  d3.transition().duration(800).tween('rot', () => {
+    const i = d3.interpolate(rotation, [100, -12, 0]);
+    return t => { rotation = i(t); draw(); };
+  }).on('end', () => { spinning = true; });
+});
+
+const node = svg.node();
+let dragging = false, moved = false, last = null;
+node.addEventListener('pointerdown', e => {
+  dragging = true; moved = false; spinning = false; last = [e.clientX, e.clientY];
+  node.classList.add('dragging');
+});
+node.addEventListener('pointermove', e => {
+  if (!dragging) return;
+  const k = 0.35;
+  if (Math.abs(e.clientX - last[0]) + Math.abs(e.clientY - last[1]) > 1) moved = true;
+  rotation = [rotation[0] + (e.clientX - last[0]) * k, Math.max(-85, Math.min(85, rotation[1] - (e.clientY - last[1]) * k)), 0];
+  last = [e.clientX, e.clientY];
+  draw();
+});
+['pointerup','pointercancel','pointerleave'].forEach(ev => node.addEventListener(ev, () => {
+  dragging = false; node.classList.remove('dragging');
+}));
+
+d3.timer(() => { if (spinning && !dragging) { rotation = [rotation[0] + 0.05, rotation[1], 0]; draw(); } });
+
+document.getElementById('bio').innerHTML = bioHTML(null);
+renderList();
+draw();
+
+fetch('https://cdn.jsdelivr.net/npm/world-atlas@2.0.2/countries-110m.json')
+  .then(r => r.json())
+  .then(topo => { renderLand(topojson.feature(topo, topo.objects.countries).features); draw(); })
+  .catch(() => {});
+</script>
+</body>
+</html>

@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <meta name="design_doc_mode" content="canvas">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Source+Sans+3:wght@400;600;700&family=Bitter:wght@400;600;700&family=Karla:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    body { margin: 0; background: #E9E4D6; }
+    a { color: #2E6B45; text-decoration: none; }
+    a:hover { color: #7A5A33; }
+  </style>
+</helmet>
+
+<section style="display:flex; flex-wrap:wrap; gap:80px; padding:60px; align-items:flex-start;">
+
+  <!-- ============ OPTION 1a — "Orchard" : cream, soft serif, rounded ============ -->
+  <div id="1a" style="width:1440px; flex:none;">
+    <div style="display:inline-flex; align-items:center; gap:8px; margin-bottom:16px; background:#2E6B45; color:#F7F3E9; font-family:monospace; font-size:14px; padding:6px 14px; border-radius:999px;">1a · Orchard — soft &amp; rounded</div>
+
+    <div style="background:#FCFAF4; color:#26241F; font-family:'Source Sans 3',sans-serif; border-radius:24px; overflow:hidden; box-shadow:0 30px 60px rgba(38,36,31,0.12);">
+
+      <!-- announcement strip -->
+      <div style="background:#2E6B45; color:#EAF3EC; font-size:14px; font-weight:600; display:flex; justify-content:center; gap:8px; padding:9px 24px; letter-spacing:0.02em;">
+        <span>This week's bulletin is ready</span>
+        <span style="color:#9CC7A8;">→ Download PDF</span>
+      </div>
+
+      <!-- nav -->
+      <div style="display:flex; align-items:center; justify-content:space-between; padding:20px 56px; background:#FCFAF4; border-bottom:1px solid #ECE5D3;">
+        <div style="display:flex; align-items:center; gap:14px;">
+          <img src="assets/logo.png" alt="Mapleview tree logo" style="width:52px; height:52px;">
+          <div>
+            <div style="font-family:'DM Serif Display',serif; font-size:22px; color:#2E6B45; line-height:1.1;">Mapleview Baptist Church</div>
+            <div style="font-size:12.5px; color:#7A5A33; letter-spacing:0.08em; text-transform:uppercase;">Lakeside, California</div>
+          </div>
+        </div>
+        <div style="display:flex; align-items:center; gap:32px; font-size:16px; font-weight:600; color:#3C3A33;">
+          <span>About</span>
+          <span>Gatherings</span>
+          <span>Ministries</span>
+          <span>Sermons</span>
+          <span style="background:#7A5A33; color:#FCFAF4; padding:10px 22px; border-radius:999px;">Give</span>
+        </div>
+      </div>
+
+      <!-- hero -->
+      <div style="display:grid; grid-template-columns:1.05fr 1fr; gap:56px; padding:72px 56px 64px; align-items:center;">
+        <div>
+          <div style="font-size:15px; font-weight:700; letter-spacing:0.14em; text-transform:uppercase; color:#4E9A5B; margin-bottom:18px;">Welcome home</div>
+          <h1 style="font-family:'DM Serif Display',serif; font-size:64px; line-height:1.05; margin:0 0 24px; color:#26241F; font-weight:400; text-wrap:balance;">Discover God, one verse at a time.</h1>
+          <p style="font-size:19px; line-height:1.6; color:#57544A; margin:0 0 32px; max-width:52ch;">We're a family of Christ-followers in Lakeside who walk fearlessly with Him — one step at a time — and share His love, one person at a time. Come as you are.</p>
+          <div style="display:flex; gap:16px; align-items:center;">
+            <span style="background:#2E6B45; color:#F7F3E9; font-weight:700; font-size:17px; padding:15px 30px; border-radius:999px;">Plan your visit</span>
+            <span style="border:2px solid #D9CFB8; color:#7A5A33; font-weight:700; font-size:17px; padding:13px 28px; border-radius:999px;">Watch a service</span>
+          </div>
+          <div style="margin-top:36px; display:flex; gap:28px; font-size:15px; color:#57544A;">
+            <div><strong style="color:#2E6B45;">Sundays 9:00 AM</strong> · Bible Studies</div>
+            <div><strong style="color:#2E6B45;">10:30 AM</strong> · Worship Service</div>
+          </div>
+        </div>
+        <div style="position:relative;">
+          <div style="height:460px; border-radius:28px; background:repeating-linear-gradient(45deg, rgba(46,107,69,0.10) 0px, rgba(46,107,69,0.10) 12px, rgba(122,90,51,0.05) 12px, rgba(122,90,51,0.05) 24px), #EFE9DA; display:flex; align-items:center; justify-content:center;">
+            <span style="font-family:monospace; font-size:14px; color:#7A5A33;">[ photo: congregation worshiping ]</span>
+          </div>
+          <div style="position:absolute; left:-28px; bottom:-28px; background:#FCFAF4; border:1px solid #ECE5D3; border-radius:20px; padding:20px 26px; box-shadow:0 16px 32px rgba(38,36,31,0.10); display:flex; gap:14px; align-items:center;">
+            <img src="assets/logo.png" alt="" style="width:38px; height:38px;">
+            <div style="font-size:15px; line-height:1.4; color:#3C3A33;"><strong>13176 Mapleview St.</strong><br>Lakeside, CA 92040</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- weekly schedule -->
+      <div style="background:#F4EEDF; padding:56px;">
+        <div style="display:flex; align-items:baseline; justify-content:space-between; margin-bottom:32px;">
+          <h2 style="font-family:'DM Serif Display',serif; font-size:36px; font-weight:400; margin:0; color:#26241F;">Gather with us this week</h2>
+          <span style="font-weight:700; color:#2E6B45; font-size:16px;">Full calendar →</span>
+        </div>
+        <div style="display:grid; grid-template-columns:repeat(4,1fr); gap:20px;">
+          <div style="background:#FCFAF4; border-radius:18px; padding:26px;">
+            <div style="font-size:13px; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; color:#7A5A33; margin-bottom:10px;">Sunday</div>
+            <div style="font-size:17px; line-height:1.55; color:#3C3A33;"><strong>9:00 AM</strong> Bible Studies<br><strong>10:30 AM</strong> Worship Service</div>
+          </div>
+          <div style="background:#FCFAF4; border-radius:18px; padding:26px;">
+            <div style="font-size:13px; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; color:#7A5A33; margin-bottom:10px;">Monday</div>
+            <div style="font-size:17px; line-height:1.55; color:#3C3A33;"><strong>9:30 AM</strong> Prayer Meeting</div>
+          </div>
+          <div style="background:#FCFAF4; border-radius:18px; padding:26px;">
+            <div style="font-size:13px; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; color:#7A5A33; margin-bottom:10px;">Tuesday</div>
+            <div style="font-size:17px; line-height:1.55; color:#3C3A33;"><strong>6:00 PM</strong> High School Youth Group</div>
+          </div>
+          <div style="background:#FCFAF4; border-radius:18px; padding:26px;">
+            <div style="font-size:13px; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; color:#7A5A33; margin-bottom:10px;">Wednesday</div>
+            <div style="font-size:17px; line-height:1.55; color:#3C3A33;"><strong>6:00 PM</strong> Kids Club, Jr. High Youth, Men's &amp; Women's Studies</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ministries -->
+      <div style="padding:72px 56px;">
+        <div style="text-align:center; margin-bottom:44px;">
+          <div style="font-size:14px; font-weight:700; letter-spacing:0.14em; text-transform:uppercase; color:#4E9A5B; margin-bottom:12px;">Ministries</div>
+          <h2 style="font-family:'DM Serif Display',serif; font-size:40px; font-weight:400; margin:0; color:#26241F;">A place for every age &amp; season</h2>
+        </div>
+        <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:24px;">
+          <div style="border:1px solid #ECE5D3; border-radius:20px; overflow:hidden; background:#FCFAF4;">
+            <div style="height:150px; background:repeating-linear-gradient(45deg, rgba(46,107,69,0.10) 0px, rgba(46,107,69,0.10) 10px, rgba(122,90,51,0.05) 10px, rgba(122,90,51,0.05) 20px), #EFE9DA; display:flex; align-items:center; justify-content:center;"><span style="font-family:monospace; font-size:12.5px; color:#7A5A33;">[ kids club photo ]</span></div>
+            <div style="padding:22px 24px;"><div style="font-family:'DM Serif Display',serif; font-size:22px; color:#2E6B45; margin-bottom:6px;">Children</div><div style="font-size:15.5px; line-height:1.5; color:#57544A;">Kids Club and Sunday classes where little ones meet a big God.</div></div>
+          </div>
+          <div style="border:1px solid #ECE5D3; border-radius:20px; overflow:hidden; background:#FCFAF4;">
+            <div style="height:150px; background:repeating-linear-gradient(45deg, rgba(46,107,69,0.10) 0px, rgba(46,107,69,0.10) 10px, rgba(122,90,51,0.05) 10px, rgba(122,90,51,0.05) 20px), #EFE9DA; display:flex; align-items:center; justify-content:center;"><span style="font-family:monospace; font-size:12.5px; color:#7A5A33;">[ youth group photo ]</span></div>
+            <div style="padding:22px 24px;"><div style="font-family:'DM Serif Display',serif; font-size:22px; color:#2E6B45; margin-bottom:6px;">Youth</div><div style="font-size:15.5px; line-height:1.5; color:#57544A;">Junior high and high school groups building real faith and real friendships.</div></div>
+          </div>
+          <div style="border:1px solid #ECE5D3; border-radius:20px; overflow:hidden; background:#FCFAF4;">
+            <div style="height:150px; background:repeating-linear-gradient(45deg, rgba(46,107,69,0.10) 0px, rgba(46,107,69,0.10) 10px, rgba(122,90,51,0.05) 10px, rgba(122,90,51,0.05) 20px), #EFE9DA; display:flex; align-items:center; justify-content:center;"><span style="font-family:monospace; font-size:12.5px; color:#7A5A33;">[ bible study photo ]</span></div>
+            <div style="padding:22px 24px;"><div style="font-family:'DM Serif Display',serif; font-size:22px; color:#2E6B45; margin-bottom:6px;">Men &amp; Women</div><div style="font-size:15.5px; line-height:1.5; color:#57544A;">Midweek studies that go deep in the Word, side by side.</div></div>
+          </div>
+        </div>
+        <div style="text-align:center; margin-top:32px; font-weight:700; color:#2E6B45; font-size:16px;">See all ministries — Discipleship, Missions &amp; more →</div>
+      </div>
+
+      <!-- sermons -->
+      <div style="background:#2E6B45; color:#EAF3EC; padding:72px 56px;">
+        <div style="display:grid; grid-template-columns:1fr 1.2fr; gap:56px; align-items:center;">
+          <div>
+            <div style="font-size:14px; font-weight:700; letter-spacing:0.14em; text-transform:uppercase; color:#9CC7A8; margin-bottom:12px;">Listen</div>
+            <h2 style="font-family:'DM Serif Display',serif; font-size:40px; font-weight:400; margin:0 0 18px; color:#F7F3E9;">One verse at a time</h2>
+            <p style="font-size:17.5px; line-height:1.6; color:#C8DECF; margin:0 0 28px;">Verse-by-verse teaching through whole books of the Bible — Genesis to Malachi, Mark to Jude. Browse the archive or subscribe to the podcast.</p>
+            <div style="display:flex; gap:14px;">
+              <span style="background:#F7F3E9; color:#2E6B45; font-weight:700; font-size:16px; padding:13px 26px; border-radius:999px;">Browse sermons</span>
+              <span style="border:2px solid #4E9A5B; color:#EAF3EC; font-weight:700; font-size:16px; padding:11px 24px; border-radius:999px;">Podcast</span>
+            </div>
+          </div>
+          <div style="display:flex; flex-direction:column; gap:14px;">
+            <div style="background:rgba(247,243,233,0.08); border:1px solid rgba(247,243,233,0.16); border-radius:16px; padding:20px 24px; display:flex; justify-content:space-between; align-items:center;">
+              <div><div style="font-weight:700; font-size:17px; color:#F7F3E9;">The God Who Sees — Genesis 16</div><div style="font-size:14.5px; color:#9CC7A8; margin-top:4px;">Latest message · Sunday Worship</div></div>
+              <span style="width:44px; height:44px; border-radius:999px; background:#F7F3E9; color:#2E6B45; display:flex; align-items:center; justify-content:center; font-size:18px;">▶</span>
+            </div>
+            <div style="background:rgba(247,243,233,0.08); border:1px solid rgba(247,243,233,0.16); border-radius:16px; padding:20px 24px; display:flex; justify-content:space-between; align-items:center;">
+              <div><div style="font-weight:700; font-size:17px; color:#F7F3E9;">Walking by Faith — Genesis 15</div><div style="font-size:14.5px; color:#9CC7A8; margin-top:4px;">Sunday Worship</div></div>
+              <span style="width:44px; height:44px; border-radius:999px; border:1.5px solid rgba(247,243,233,0.4); color:#F7F3E9; display:flex; align-items:center; justify-content:center; font-size:18px;">▶</span>
+            </div>
+            <div style="background:rgba(247,243,233,0.08); border:1px solid rgba(247,243,233,0.16); border-radius:16px; padding:20px 24px; display:flex; justify-content:space-between; align-items:center;">
+              <div><div style="font-weight:700; font-size:17px; color:#F7F3E9;">A Covenant Promise — Genesis 14</div><div style="font-size:14.5px; color:#9CC7A8; margin-top:4px;">Sunday Worship</div></div>
+              <span style="width:44px; height:44px; border-radius:999px; border:1.5px solid rgba(247,243,233,0.4); color:#F7F3E9; display:flex; align-items:center; justify-content:center; font-size:18px;">▶</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- events + give -->
+      <div style="display:grid; grid-template-columns:1fr 1fr; gap:24px; padding:56px;">
+        <div style="background:#F4EEDF; border-radius:20px; padding:36px;">
+          <h3 style="font-family:'DM Serif Display',serif; font-size:28px; font-weight:400; margin:0 0 10px; color:#26241F;">Events &amp; sign-ups</h3>
+          <p style="font-size:16px; line-height:1.6; color:#57544A; margin:0 0 20px;">Kids Club registration, church events, and this week's bulletin — all in one place.</p>
+          <div style="display:flex; gap:12px; flex-wrap:wrap;">
+            <span style="background:#7A5A33; color:#FCFAF4; font-weight:700; font-size:15px; padding:11px 22px; border-radius:999px;">Event sign-up</span>
+            <span style="border:2px solid #D9CFB8; color:#7A5A33; font-weight:700; font-size:15px; padding:9px 20px; border-radius:999px;">Weekly bulletin</span>
+          </div>
+        </div>
+        <div style="background:#F4EEDF; border-radius:20px; padding:36px;">
+          <h3 style="font-family:'DM Serif Display',serif; font-size:28px; font-weight:400; margin:0 0 10px; color:#26241F;">Give with gladness</h3>
+          <p style="font-size:16px; line-height:1.6; color:#57544A; margin:0 0 20px;">Your generosity supports ministry in Lakeside and missions around the world.</p>
+          <span style="display:inline-block; background:#2E6B45; color:#F7F3E9; font-weight:700; font-size:15px; padding:11px 22px; border-radius:999px;">Give online</span>
+        </div>
+      </div>
+
+      <!-- footer -->
+      <div style="background:#26241F; color:#B8B2A3; padding:48px 56px; display:flex; justify-content:space-between; align-items:center;">
+        <div style="display:flex; align-items:center; gap:14px;">
+          <img src="assets/logo.png" alt="" style="width:42px; height:42px;">
+          <div style="font-size:15px; line-height:1.5;"><span style="font-family:'DM Serif Display',serif; font-size:18px; color:#F7F3E9;">Mapleview Baptist Church</span><br>13176 Mapleview St, Lakeside, CA 92040</div>
+        </div>
+        <div style="font-size:15px; text-align:right; line-height:1.6;">(619) 443-6467<br>office@mapleviewchurch.com</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ OPTION 1b — "Grove" : deep green hero, editorial slab ============ -->
+  <div id="1b" style="width:1440px; flex:none;">
+    <div style="display:inline-flex; align-items:center; gap:8px; margin-bottom:16px; background:#7A5A33; color:#F7F3E9; font-family:monospace; font-size:14px; padding:6px 14px; border-radius:999px;">1b · Grove — deep green, structured</div>
+
+    <div style="background:#FBF8F0; color:#23271F; font-family:'Karla',sans-serif; overflow:hidden; box-shadow:0 30px 60px rgba(35,39,31,0.14);">
+
+      <!-- nav -->
+      <div style="background:#234D33; color:#F3EFE2; display:flex; align-items:center; justify-content:space-between; padding:22px 64px;">
+        <div style="display:flex; align-items:center; gap:14px;">
+          <div style="width:52px; height:52px; border-radius:12px; background:#F3EFE2; display:flex; align-items:center; justify-content:center;"><img src="assets/logo.png" alt="Mapleview tree logo" style="width:40px; height:40px;"></div>
+          <div style="font-family:'Bitter',serif; font-size:21px; font-weight:700; letter-spacing:0.01em;">Mapleview Baptist Church</div>
+        </div>
+        <div style="display:flex; align-items:center; gap:34px; font-size:16px; font-weight:700;">
+          <span>About</span>
+          <span>Gatherings</span>
+          <span>Ministries</span>
+          <span>Sermons</span>
+          <span style="background:#E9B84C; color:#23271F; padding:11px 24px; border-radius:6px;">Give</span>
+        </div>
+      </div>
+
+      <!-- hero -->
+      <div style="background:#234D33; color:#F3EFE2; padding:64px 64px 0;">
+        <div style="max-width:900px;">
+          <h1 style="font-family:'Bitter',serif; font-size:70px; line-height:1.06; font-weight:700; margin:0 0 22px; text-wrap:balance;">A church family rooted in the Word.</h1>
+          <p style="font-size:20px; line-height:1.6; color:#C4D6C6; margin:0 0 30px; max-width:56ch;">Discover God one verse at a time. Walk fearlessly with Him one step at a time. Share His love one person at a time. Join us in Lakeside this Sunday.</p>
+          <div style="display:flex; gap:16px; margin-bottom:52px;">
+            <span style="background:#E9B84C; color:#23271F; font-weight:700; font-size:17px; padding:15px 30px; border-radius:6px;">Plan your visit</span>
+            <span style="border:2px solid rgba(243,239,226,0.45); color:#F3EFE2; font-weight:700; font-size:17px; padding:13px 28px; border-radius:6px;">Watch live</span>
+          </div>
+        </div>
+        <div style="height:420px; border-radius:14px 14px 0 0; background:repeating-linear-gradient(45deg, rgba(46,107,69,0.14) 0px, rgba(46,107,69,0.14) 12px, rgba(233,184,76,0.07) 12px, rgba(233,184,76,0.07) 24px), #E9E2CE; display:flex; align-items:center; justify-content:center;">
+          <span style="font-family:monospace; font-size:14px; color:#7A5A33;">[ wide photo: Sunday gathering ]</span>
+        </div>
+      </div>
+
+      <!-- service times bar -->
+      <div style="background:#7A5A33; color:#F7F3E9; display:grid; grid-template-columns:repeat(4,1fr); gap:1px; padding:0;">
+        <div style="padding:26px 32px; background:#7A5A33;"><div style="font-size:13px; font-weight:700; letter-spacing:0.14em; text-transform:uppercase; color:#D9C4A0; margin-bottom:6px;">Sunday</div><div style="font-family:'Bitter',serif; font-size:18px; font-weight:700; line-height:1.4;">9:00 AM Bible Studies<br>10:30 AM Worship</div></div>
+        <div style="padding:26px 32px; background:#71532F;"><div style="font-size:13px; font-weight:700; letter-spacing:0.14em; text-transform:uppercase; color:#D9C4A0; margin-bottom:6px;">Monday</div><div style="font-family:'Bitter',serif; font-size:18px; font-weight:700; line-height:1.4;">9:30 AM Prayer Meeting</div></div>
+        <div style="padding:26px 32px; background:#7A5A33;"><div style="font-size:13px; font-weight:700; letter-spacing:0.14em; text-transform:uppercase; color:#D9C4A0; margin-bottom:6px;">Tuesday</div><div style="font-family:'Bitter',serif; font-size:18px; font-weight:700; line-height:1.4;">6:00 PM HS Youth Group</div></div>
+        <div style="padding:26px 32px; background:#71532F;"><div style="font-size:13px; font-weight:700; letter-spacing:0.14em; text-transform:uppercase; color:#D9C4A0; margin-bottom:6px;">Wednesday</div><div style="font-family:'Bitter',serif; font-size:18px; font-weight:700; line-height:1.4;">6:00 PM Kids Club, Jr. High, Adult Studies</div></div>
+      </div>
+
+      <!-- welcome / location -->
+      <div style="display:grid; grid-template-columns:1fr 1fr; gap:64px; padding:80px 64px; align-items:center;">
+        <div>
+          <div style="font-size:14px; font-weight:700; letter-spacing:0.16em; text-transform:uppercase; color:#4E9A5B; margin-bottom:14px;">New here?</div>
+          <h2 style="font-family:'Bitter',serif; font-size:42px; font-weight:700; margin:0 0 18px; line-height:1.15;">You're welcome exactly as you are.</h2>
+          <p style="font-size:18px; line-height:1.65; color:#55584C; margin:0 0 26px;">We're a collection of caring, Christ-following people with classes for every age. Park out front, grab a coffee, and someone will help you find your way.</p>
+          <div style="font-size:17px; line-height:1.7; color:#23271F;"><strong>13176 Mapleview St, Lakeside, CA 92040</strong><br>(619) 443-6467 · office@mapleviewchurch.com</div>
+        </div>
+        <div style="height:380px; border-radius:14px; background:repeating-linear-gradient(45deg, rgba(46,107,69,0.10) 0px, rgba(46,107,69,0.10) 12px, rgba(122,90,51,0.06) 12px, rgba(122,90,51,0.06) 24px), #EDE7D6; display:flex; align-items:center; justify-content:center;">
+          <span style="font-family:monospace; font-size:14px; color:#7A5A33;">[ photo: greeting at the door / campus ]</span>
+        </div>
+      </div>
+
+      <!-- ministries strip -->
+      <div style="background:#F0EADA; padding:72px 64px;">
+        <h2 style="font-family:'Bitter',serif; font-size:40px; font-weight:700; margin:0 0 36px;">Ministries for every season</h2>
+        <div style="display:grid; grid-template-columns:repeat(6,1fr); gap:16px;">
+          <div style="background:#FBF8F0; border-radius:12px; padding:24px 20px; border-top:4px solid #4E9A5B;"><div style="font-family:'Bitter',serif; font-size:19px; font-weight:700; margin-bottom:6px;">Children</div><div style="font-size:14.5px; line-height:1.5; color:#55584C;">Kids Club &amp; Sunday classes</div></div>
+          <div style="background:#FBF8F0; border-radius:12px; padding:24px 20px; border-top:4px solid #2E6B45;"><div style="font-family:'Bitter',serif; font-size:19px; font-weight:700; margin-bottom:6px;">Youth</div><div style="font-size:14.5px; line-height:1.5; color:#55584C;">Jr. high &amp; high school</div></div>
+          <div style="background:#FBF8F0; border-radius:12px; padding:24px 20px; border-top:4px solid #7A5A33;"><div style="font-family:'Bitter',serif; font-size:19px; font-weight:700; margin-bottom:6px;">Women</div><div style="font-size:14.5px; line-height:1.5; color:#55584C;">Wednesday Bible study</div></div>
+          <div style="background:#FBF8F0; border-radius:12px; padding:24px 20px; border-top:4px solid #7A5A33;"><div style="font-family:'Bitter',serif; font-size:19px; font-weight:700; margin-bottom:6px;">Men</div><div style="font-size:14.5px; line-height:1.5; color:#55584C;">Wednesday Bible study</div></div>
+          <div style="background:#FBF8F0; border-radius:12px; padding:24px 20px; border-top:4px solid #2E6B45;"><div style="font-family:'Bitter',serif; font-size:19px; font-weight:700; margin-bottom:6px;">Discipleship</div><div style="font-size:14.5px; line-height:1.5; color:#55584C;">Growing together</div></div>
+          <div style="background:#FBF8F0; border-radius:12px; padding:24px 20px; border-top:4px solid #4E9A5B;"><div style="font-family:'Bitter',serif; font-size:19px; font-weight:700; margin-bottom:6px;">Missions</div><div style="font-size:14.5px; line-height:1.5; color:#55584C;">Local &amp; global</div></div>
+        </div>
+      </div>
+
+      <!-- sermons -->
+      <div style="padding:80px 64px; display:grid; grid-template-columns:1fr 1fr; gap:64px; align-items:center;">
+        <div style="height:340px; border-radius:14px; background:#234D33; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:16px;">
+          <span style="width:72px; height:72px; border-radius:999px; background:#E9B84C; color:#23271F; display:flex; align-items:center; justify-content:center; font-size:26px;">▶</span>
+          <span style="color:#C4D6C6; font-size:15px; font-weight:700;">Latest message · The God Who Sees — Genesis 16</span>
+        </div>
+        <div>
+          <div style="font-size:14px; font-weight:700; letter-spacing:0.16em; text-transform:uppercase; color:#4E9A5B; margin-bottom:14px;">Sermons</div>
+          <h2 style="font-family:'Bitter',serif; font-size:42px; font-weight:700; margin:0 0 18px; line-height:1.15;">Teaching through whole books, verse by verse.</h2>
+          <p style="font-size:18px; line-height:1.65; color:#55584C; margin:0 0 26px;">Search the full archive by book, series, or passage — or take it with you on Spotify and Apple Podcasts.</p>
+          <div style="display:flex; gap:14px;">
+            <span style="background:#234D33; color:#F3EFE2; font-weight:700; font-size:16px; padding:13px 26px; border-radius:6px;">Browse the archive</span>
+            <span style="border:2px solid #D5CBB4; color:#7A5A33; font-weight:700; font-size:16px; padding:11px 24px; border-radius:6px;">Subscribe</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- CTA band -->
+      <div style="background:#E9B84C; color:#23271F; padding:44px 64px; display:flex; justify-content:space-between; align-items:center; gap:32px;">
+        <div style="font-family:'Bitter',serif; font-size:30px; font-weight:700;">This week's bulletin, events &amp; giving — one tap away.</div>
+        <div style="display:flex; gap:14px; flex:none;">
+          <span style="background:#23271F; color:#F3EFE2; font-weight:700; font-size:16px; padding:13px 26px; border-radius:6px;">Bulletin</span>
+          <span style="background:#23271F; color:#F3EFE2; font-weight:700; font-size:16px; padding:13px 26px; border-radius:6px;">Events</span>
+          <span style="background:#23271F; color:#F3EFE2; font-weight:700; font-size:16px; padding:13px 26px; border-radius:6px;">Give</span>
+        </div>
+      </div>
+
+      <!-- footer -->
+      <div style="background:#23271F; color:#AEB0A2; padding:48px 64px; display:flex; justify-content:space-between; align-items:center;">
+        <div style="display:flex; align-items:center; gap:14px;">
+          <img src="assets/logo.png" alt="" style="width:42px; height:42px;">
+          <div style="font-size:15px; line-height:1.5;"><span style="font-family:'Bitter',serif; font-size:18px; font-weight:700; color:#F3EFE2;">Mapleview Baptist Church</span><br>13176 Mapleview St, Lakeside, CA 92040</div>
+        </div>
+        <div style="font-size:15px; text-align:right; line-height:1.6;">(619) 443-6467<br>office@mapleviewchurch.com</div>
+      </div>
+    </div>
+  </div>
+
+</section>
+</x-dc>
+</body>
+</html>

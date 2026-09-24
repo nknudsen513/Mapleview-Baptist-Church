@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    body { margin: 0; background: #FCFAF4; }
+    a { color: #2E6B45; text-decoration: none; }
+    a:hover { color: #7A5A33; }
+  </style>
+</helmet>
+
+<div data-screen-label="Sermons" style="background:#FCFAF4; color:#26241F; font-family:'Source Sans 3',sans-serif; min-height:100vh;">
+
+  <!-- nav -->
+  <div style="display:flex; align-items:center; justify-content:space-between; padding:20px 48px; background:#FCFAF4; border-bottom:1px solid #ECE5D3;">
+    <a href="Home.dc.html" style="display:flex; align-items:center; gap:14px;">
+      <img src="assets/logo.png" alt="Mapleview tree logo" style="width:52px; height:52px;">
+      <span>
+        <span style="display:block; font-family:'DM Serif Display',serif; font-size:22px; color:#2E6B45; line-height:1.1;">Mapleview Baptist Church</span>
+        <span style="display:block; font-size:12.5px; color:#7A5A33; letter-spacing:0.08em; text-transform:uppercase;">Lakeside, California</span>
+      </span>
+    </a>
+    <div style="display:flex; align-items:center; gap:32px; font-size:16px; font-weight:600;">
+      <a href="About.dc.html" style="color:#3C3A33;">About</a>
+      <a href="Gatherings.dc.html" style="color:#3C3A33;">Gatherings</a>
+      <a href="Ministries.dc.html" style="color:#3C3A33;">Ministries</a>
+      <a href="Sermons.dc.html" style="color:#2E6B45; border-bottom:2px solid #2E6B45; padding-bottom:2px;">Sermons</a>
+      <a href="Give.dc.html" style="background:#7A5A33; color:#FCFAF4; padding:10px 22px; border-radius:999px;">Give</a>
+    </div>
+  </div>
+
+  <!-- page header -->
+  <div style="background:#2E6B45; color:#EAF3EC; padding:72px 48px;">
+    <div style="max-width:1320px; margin:0 auto; display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,400px),1fr)); gap:56px; align-items:center;">
+      <div style="min-width:0;">
+      <div style="font-size:15px; font-weight:700; letter-spacing:0.14em; text-transform:uppercase; color:#9CC7A8; margin-bottom:16px;">Listen</div>
+      <h1 style="font-family:'DM Serif Display',serif; font-size:56px; line-height:1.08; margin:0 0 20px; font-weight:400; color:#F7F3E9;">Sermon archive</h1>
+      <p style="font-size:19px; line-height:1.6; color:#C8DECF; margin:0 0 32px; max-width:60ch;">Verse-by-verse teaching through whole books of the Bible. Search by title or passage, or filter by book — and take it with you on Spotify or Apple Podcasts.</p>
+      <input type="text" value="{{ query }}" onChange="{{ onQueryChange }}" placeholder="Search by title or passage…" style="width:100%; max-width:520px; box-sizing:border-box; font-family:'Source Sans 3',sans-serif; font-size:17px; padding:15px 24px; border-radius:999px; border:none; background:#F7F3E9; color:#26241F; outline:none;">
+      </div>
+      <x-import component-from-global-scope="photo-pick" from="./photo-pick.js" slot-id="sermons-header" height="340px" radius="28px" srcs="assets/photos/Preaching-2.jpg" hint-size="100%,340px"></x-import>
+    </div>
+  </div>
+
+  <!-- filters + list -->
+  <div style="max-width:1320px; margin:0 auto; padding:48px;">
+    <div style="display:flex; flex-wrap:wrap; gap:10px; margin-bottom:36px;">
+      <sc-for list="{{ books }}" as="b" hint-placeholder-count="8">
+        <button onClick="{{ b.select }}" style="{{ b.style }}">{{ b.name }}</button>
+      </sc-for>
+    </div>
+
+    <div style="display:flex; flex-direction:column; gap:14px;">
+      <sc-for list="{{ filtered }}" as="s" hint-placeholder-count="6">
+        <div style="display:grid; grid-template-columns:64px 1fr auto; gap:24px; align-items:center; background:#F4EEDF; border-radius:18px; padding:22px 28px;">
+          <span style="width:52px; height:52px; border-radius:999px; background:#2E6B45; color:#F7F3E9; display:flex; align-items:center; justify-content:center; font-size:18px;">▶</span>
+          <div>
+            <div style="font-weight:700; font-size:18px; color:#26241F;">{{ s.title }}</div>
+            <div style="font-size:15px; color:#7A5A33; margin-top:4px;">{{ s.passage }} · {{ s.speaker }}</div>
+          </div>
+          <div style="font-size:15px; color:#57544A; text-align:right;">{{ s.date }}</div>
+        </div>
+      </sc-for>
+      <sc-if value="{{ noResults }}" hint-placeholder-val="{{ false }}">
+        <div style="text-align:center; padding:48px; color:#57544A; font-size:17px;">No sermons match that search — try a different title, passage, or book.</div>
+      </sc-if>
+    </div>
+    <div style="text-align:center; margin-top:24px; font-size:14.5px; color:#7A5A33; font-family:monospace;">[ live archive from the sermon podcast feed — 100 most recent messages, Oct 2024 to today ]</div>
+  </div>
+
+  <!-- podcast CTA -->
+  <div style="background:#F4EEDF; padding:56px 48px;">
+    <div style="max-width:1320px; margin:0 auto; display:flex; justify-content:space-between; align-items:center; gap:40px;">
+      <div>
+        <h2 style="font-family:'DM Serif Display',serif; font-size:32px; font-weight:400; margin:0 0 8px;">Take it with you</h2>
+        <p style="font-size:16.5px; color:#57544A; margin:0;">Subscribe to the Mapleview sermon podcast wherever you listen.</p>
+      </div>
+      <div style="display:flex; gap:12px; flex:none;">
+        <a href="#" style="background:#2E6B45; color:#F7F3E9; font-weight:700; font-size:15px; padding:12px 24px; border-radius:999px;">Spotify</a>
+        <a href="#" style="background:#2E6B45; color:#F7F3E9; font-weight:700; font-size:15px; padding:12px 24px; border-radius:999px;">Apple Podcasts</a>
+        <a href="#" style="border:2px solid #D9CFB8; color:#7A5A33; font-weight:700; font-size:15px; padding:10px 22px; border-radius:999px;">YouTube</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- footer -->
+  <div style="background:#26241F; color:#B8B2A3; padding:48px; display:flex; justify-content:space-between; align-items:center; gap:36px; flex-wrap:wrap;">
+    <div style="display:flex; align-items:center; gap:14px;">
+      <img src="assets/logo.png" alt="" style="width:42px; height:42px;">
+      <div style="font-size:15px; line-height:1.5;"><span style="font-family:'DM Serif Display',serif; font-size:18px; color:#F7F3E9;">Mapleview Baptist Church</span><br>13176 Mapleview St, Lakeside, CA 92040</div>
+    </div>
+    <div style="display:flex; gap:28px; font-size:15px; font-weight:600;">
+      <a href="About.dc.html" style="color:#B8B2A3;">About</a>
+      <a href="Gatherings.dc.html" style="color:#B8B2A3;">Gatherings</a>
+      <a href="Ministries.dc.html" style="color:#B8B2A3;">Ministries</a>
+      <a href="Sermons.dc.html" style="color:#B8B2A3;">Sermons</a>
+      <a href="Give.dc.html" style="color:#B8B2A3;">Give</a>
+    </div>
+    <div style="font-size:15px; text-align:right; line-height:1.6;">(619) 443-6467<br>office@mapleviewchurch.com</div>
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = { query: "", book: "All", sermons: [] };
+
+  componentDidMount() {
+    import('./sermons-data.js').then(mod => this.setState({ sermons: mod.SERMONS }));
+  }
+
+  renderVals() {
+    const all = this.state.sermons;
+    const bookNames = ["All"];
+    all.forEach(s => { if (!bookNames.includes(s.series)) bookNames.push(s.series); });
+    const q = this.state.query.trim().toLowerCase();
+    const filtered = all.filter(s => {
+      const inBook = this.state.book === "All" || s.series === this.state.book;
+      const inQuery = !q || s.title.toLowerCase().includes(q) || s.passage.toLowerCase().includes(q) || s.speaker.toLowerCase().includes(q);
+      return inBook && inQuery;
+    });
+    const baseChip = "font-family:'Source Sans 3',sans-serif; font-size:15px; font-weight:700; padding:10px 20px; border-radius:999px; cursor:pointer;";
+    return {
+      query: this.state.query,
+      onQueryChange: (e) => this.setState({ query: e.target.value }),
+      books: bookNames.map(name => ({
+        name,
+        select: () => this.setState({ book: name }),
+        style: name === this.state.book
+          ? baseChip + " background:#2E6B45; color:#F7F3E9; border:2px solid #2E6B45;"
+          : baseChip + " background:#FCFAF4; color:#3C3A33; border:2px solid #ECE5D3;"
+      })),
+      filtered,
+      noResults: filtered.length === 0
+    };
+  }
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    body { margin: 0; background: #FCFAF4; }
+    a { color: #2E6B45; text-decoration: none; }
+    a:hover { color: #7A5A33; }
+  </style>
+</helmet>
+
+<div data-screen-label="Ministries" style="background:#FCFAF4; color:#26241F; font-family:'Source Sans 3',sans-serif; min-height:100vh;">
+
+  <!-- nav -->
+  <div style="display:flex; align-items:center; justify-content:space-between; padding:20px 48px; background:#FCFAF4; border-bottom:1px solid #ECE5D3;">
+    <a href="Home.dc.html" style="display:flex; align-items:center; gap:14px;">
+      <img src="assets/logo.png" alt="Mapleview tree logo" style="width:52px; height:52px;">
+      <span>
+        <span style="display:block; font-family:'DM Serif Display',serif; font-size:22px; color:#2E6B45; line-height:1.1;">Mapleview Baptist Church</span>
+        <span style="display:block; font-size:12.5px; color:#7A5A33; letter-spacing:0.08em; text-transform:uppercase;">Lakeside, California</span>
+      </span>
+    </a>
+    <div style="display:flex; align-items:center; gap:32px; font-size:16px; font-weight:600;">
+      <a href="About.dc.html" style="color:#3C3A33;">About</a>
+      <a href="Gatherings.dc.html" style="color:#3C3A33;">Gatherings</a>
+      <a href="Ministries.dc.html" style="color:#2E6B45; border-bottom:2px solid #2E6B45; padding-bottom:2px;">Ministries</a>
+      <a href="Sermons.dc.html" style="color:#3C3A33;">Sermons</a>
+      <a href="Give.dc.html" style="background:#7A5A33; color:#FCFAF4; padding:10px 22px; border-radius:999px;">Give</a>
+    </div>
+  </div>
+
+  <!-- page header -->
+  <div style="background:#F4EEDF; padding:72px 48px;">
+    <div style="max-width:1320px; margin:0 auto; display:grid; grid-template-columns:1.1fr 1fr; gap:56px; align-items:center;">
+      <div>
+      <div style="font-size:15px; font-weight:700; letter-spacing:0.14em; text-transform:uppercase; color:#4E9A5B; margin-bottom:16px;">Ministries</div>
+      <h1 style="font-family:'DM Serif Display',serif; font-size:56px; line-height:1.08; margin:0 0 20px; font-weight:400; max-width:20ch; text-wrap:balance;">A place for every age and season.</h1>
+      <p style="font-size:19px; line-height:1.6; color:#57544A; margin:0; max-width:60ch;">From Kids Club to men's and women's studies to missions around the world — every ministry exists to help you know God and make Him known.</p>
+      </div>
+      <x-import component-from-global-scope="photo-pick" from="./photo-pick.js" slot-id="ministries-header" height="340px" radius="28px" srcs="assets/photos/Congregation-1.jpg" hint-size="100%,340px"></x-import>
+    </div>
+  </div>
+
+  <!-- ministries grid -->
+  <div style="max-width:1320px; margin:0 auto; padding:72px 48px; display:grid; grid-template-columns:repeat(auto-fit,minmax(520px,1fr)); gap:28px;">
+    <sc-for list="{{ ministries }}" as="m" hint-placeholder-count="6">
+      <a href="{{ m.href }}" style="border:1px solid #ECE5D3; border-radius:24px; overflow:hidden; background:#FCFAF4; display:grid; grid-template-columns:minmax(0,0.9fr) minmax(0,1.4fr);">
+        <sc-if value="{{ m.srcs }}" hint-placeholder-val="{{ false }}">
+          <x-import component-from-global-scope="photo-pick" from="./photo-pick.js" slot-id="{{ m.slotId }}" srcs="{{ m.srcs }}" radius="0px" height="100%" hint-size="100%,220px"></x-import>
+        </sc-if>
+        <sc-if value="{{ m.noPhoto }}" hint-placeholder-val="{{ true }}">
+          <div style="min-height:220px; background:repeating-linear-gradient(45deg, rgba(46,107,69,0.10) 0px, rgba(46,107,69,0.10) 10px, rgba(122,90,51,0.05) 10px, rgba(122,90,51,0.05) 20px), #EFE9DA; display:flex; align-items:center; justify-content:center;">
+            <span style="font-family:monospace; font-size:12px; color:#7A5A33; text-align:center; padding:0 12px;">{{ m.photo }}</span>
+          </div>
+        </sc-if>
+        <div style="padding:28px 30px; display:flex; flex-direction:column; gap:10px; min-width:0;">
+          <div style="font-family:'DM Serif Display',serif; font-size:26px; color:#2E6B45; overflow-wrap:break-word;">{{ m.name }}</div>
+          <div style="font-size:14px; font-weight:700; color:#7A5A33; letter-spacing:0.04em;">{{ m.when }}</div>
+          <div style="font-size:16px; line-height:1.6; color:#57544A;">{{ m.blurb }}</div>
+          <div style="font-size:15px; font-weight:700; color:#2E6B45; margin-top:4px;">Learn more</div>
+        </div>
+      </a>
+    </sc-for>
+  </div>
+
+  <!-- kids club CTA -->
+  <div style="background:#2E6B45; color:#EAF3EC; padding:64px 48px;">
+    <div style="max-width:1320px; margin:0 auto; display:flex; justify-content:space-between; align-items:center; gap:40px;">
+      <div>
+        <h2 style="font-family:'DM Serif Display',serif; font-size:36px; font-weight:400; margin:0 0 10px; color:#F7F3E9;">Kids Club registration is open</h2>
+        <p style="font-size:17px; line-height:1.6; color:#C8DECF; margin:0;">Wednesday evenings at 6:00 PM — games, songs, and Bible lessons kids love.</p>
+      </div>
+      <a href="https://mapleviewchurchvbs.churchcenter.com/registrations/events/3121094" style="flex:none; background:#F7F3E9; color:#2E6B45; font-weight:700; font-size:17px; padding:15px 30px; border-radius:999px;">Register your kids</a>
+    </div>
+  </div>
+
+  <!-- footer -->
+  <div style="background:#26241F; color:#B8B2A3; padding:48px; display:flex; justify-content:space-between; align-items:center; gap:36px; flex-wrap:wrap;">
+    <div style="display:flex; align-items:center; gap:14px;">
+      <img src="assets/logo.png" alt="" style="width:42px; height:42px;">
+      <div style="font-size:15px; line-height:1.5;"><span style="font-family:'DM Serif Display',serif; font-size:18px; color:#F7F3E9;">Mapleview Baptist Church</span><br>13176 Mapleview St, Lakeside, CA 92040</div>
+    </div>
+    <div style="display:flex; gap:28px; font-size:15px; font-weight:600;">
+      <a href="About.dc.html" style="color:#B8B2A3;">About</a>
+      <a href="Gatherings.dc.html" style="color:#B8B2A3;">Gatherings</a>
+      <a href="Ministries.dc.html" style="color:#B8B2A3;">Ministries</a>
+      <a href="Sermons.dc.html" style="color:#B8B2A3;">Sermons</a>
+      <a href="Give.dc.html" style="color:#B8B2A3;">Give</a>
+    </div>
+    <div style="font-size:15px; text-align:right; line-height:1.6;">(619) 443-6467<br>office@mapleviewchurch.com</div>
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  renderVals() {
+    const ministries = [
+        { href: "Children.dc.html", name: "Children", when: "Sundays 9:00 AM · Wednesdays 6:00 PM", blurb: "Kids Club and Sunday classes where little ones meet a big God through songs, games, and Bible lessons.", photo: "[ kids club photo ]", slotId: "ministry-children", srcs: "assets/photos/Kids-1.jpg, assets/photos/Kids-2.jpg, assets/photos/Kids-3.jpg" },
+        { href: "Youth.dc.html", name: "Youth", when: "Jr. High Wed 6:00 PM · High School Tue 6:00 PM", blurb: "Two weekly groups where students build real faith and real friendships.", photo: "[ youth group photo ]", slotId: "ministry-youth", srcs: "assets/photos/Youth-1.jpg, assets/photos/Youth-2.jpg" },
+        { href: "Women.dc.html", name: "Women", when: "Wednesdays 6:00 PM", blurb: "A midweek Bible study where women encourage one another and go deep in the Word.", photo: "[ women's study photo ]", slotId: "ministry-women", srcs: "assets/photos/Womens-group-1.jpg, assets/photos/Womens-group-2.jpg" },
+        { href: "Men.dc.html", name: "Men", when: "Wednesdays 6:00 PM", blurb: "Men sharpening men through honest conversation and careful study of Scripture.", photo: "[ men's study photo ]", slotId: "ministry-men", srcs: "assets/photos/Mens-group-2.jpg" },
+        { href: "Discipleship.dc.html", name: "Discipleship", when: "Ongoing", blurb: "One-on-one and small-group relationships that help every believer take the next step.", photo: "[ discipleship photo ]", slotId: "ministry-discipleship", srcs: "assets/photos/Guys-1on1-1.jpg" },
+        { href: "Missions.html", name: "Missions", when: "Local & global", blurb: "Supporting workers near and far as we share His love one person at a time.", photo: "[ missions photo ]", slotId: "ministry-missions", srcs: "assets/photos/Older-Couple-1.jpg" }
+    ];
+    ministries.forEach(m => { m.noPhoto = !m.srcs; });
+    return { ministries };
+  }
+}
+</script>
+</body>
+</html>

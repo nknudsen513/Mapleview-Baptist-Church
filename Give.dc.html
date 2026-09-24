@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    body { margin: 0; background: #FCFAF4; }
+    a { color: #2E6B45; text-decoration: none; }
+    a:hover { color: #7A5A33; }
+  </style>
+</helmet>
+
+<div data-screen-label="Give" style="background:#FCFAF4; color:#26241F; font-family:'Source Sans 3',sans-serif; min-height:100vh;">
+
+  <!-- nav -->
+  <div style="display:flex; align-items:center; justify-content:space-between; padding:20px 48px; background:#FCFAF4; border-bottom:1px solid #ECE5D3;">
+    <a href="Home.dc.html" style="display:flex; align-items:center; gap:14px;">
+      <img src="assets/logo.png" alt="Mapleview tree logo" style="width:52px; height:52px;">
+      <span>
+        <span style="display:block; font-family:'DM Serif Display',serif; font-size:22px; color:#2E6B45; line-height:1.1;">Mapleview Baptist Church</span>
+        <span style="display:block; font-size:12.5px; color:#7A5A33; letter-spacing:0.08em; text-transform:uppercase;">Lakeside, California</span>
+      </span>
+    </a>
+    <div style="display:flex; align-items:center; gap:32px; font-size:16px; font-weight:600;">
+      <a href="About.dc.html" style="color:#3C3A33;">About</a>
+      <a href="Gatherings.dc.html" style="color:#3C3A33;">Gatherings</a>
+      <a href="Ministries.dc.html" style="color:#3C3A33;">Ministries</a>
+      <a href="Sermons.dc.html" style="color:#3C3A33;">Sermons</a>
+      <a href="Give.dc.html" style="background:#7A5A33; color:#FCFAF4; padding:10px 22px; border-radius:999px;">Give</a>
+    </div>
+  </div>
+
+  <!-- page header -->
+  <div style="background:#F4EEDF; padding:80px 48px; text-align:center;">
+    <div style="max-width:760px; margin:0 auto;">
+      <div style="font-size:15px; font-weight:700; letter-spacing:0.14em; text-transform:uppercase; color:#4E9A5B; margin-bottom:16px;">Give</div>
+      <h1 style="font-family:'DM Serif Display',serif; font-size:56px; line-height:1.08; margin:0 0 20px; font-weight:400; text-wrap:balance;">Give with gladness</h1>
+      <p style="font-size:19px; line-height:1.65; color:#57544A; margin:0 0 8px;">"Each one must give as he has decided in his heart, not reluctantly or under compulsion, for God loves a cheerful giver."</p>
+      <p style="font-size:15px; font-weight:700; color:#7A5A33; margin:0;">2 Corinthians 9:7</p>
+    </div>
+  </div>
+
+  <!-- ways to give -->
+  <div style="max-width:1100px; margin:0 auto; padding:72px 48px;">
+    <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:24px;">
+      <div style="border:1px solid #ECE5D3; border-radius:20px; padding:36px; background:#FCFAF4; display:flex; flex-direction:column; gap:12px;">
+        <div style="font-family:'DM Serif Display',serif; font-size:24px; color:#2E6B45;">Online</div>
+        <div style="font-size:16px; line-height:1.6; color:#57544A; flex:1;">Give securely online — one time or recurring.</div>
+        <a href="#" style="display:inline-block; align-self:flex-start; background:#2E6B45; color:#F7F3E9; font-weight:700; font-size:15px; padding:12px 24px; border-radius:999px;">Give online</a>
+      </div>
+      <div style="border:1px solid #ECE5D3; border-radius:20px; padding:36px; background:#FCFAF4; display:flex; flex-direction:column; gap:12px;">
+        <div style="font-family:'DM Serif Display',serif; font-size:24px; color:#2E6B45;">In person</div>
+        <div style="font-size:16px; line-height:1.6; color:#57544A; flex:1;">Place your gift in the offering box at any Sunday gathering.</div>
+        <a href="Gatherings.dc.html" style="display:inline-block; align-self:flex-start; border:2px solid #D9CFB8; color:#7A5A33; font-weight:700; font-size:15px; padding:10px 22px; border-radius:999px;">Service times</a>
+      </div>
+      <div style="border:1px solid #ECE5D3; border-radius:20px; padding:36px; background:#FCFAF4; display:flex; flex-direction:column; gap:12px;">
+        <div style="font-family:'DM Serif Display',serif; font-size:24px; color:#2E6B45;">By mail</div>
+        <div style="font-size:16px; line-height:1.6; color:#57544A; flex:1;">Mapleview Baptist Church<br>13176 Mapleview St.<br>Lakeside, CA 92040</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- where it goes -->
+  <div style="background:#2E6B45; color:#EAF3EC; padding:72px 48px;">
+    <div style="max-width:1100px; margin:0 auto; display:grid; grid-template-columns:1fr 1fr; gap:64px; align-items:center;">
+      <div>
+        <h2 style="font-family:'DM Serif Display',serif; font-size:38px; font-weight:400; margin:0 0 18px; color:#F7F3E9;">Where your giving goes</h2>
+        <p style="font-size:17.5px; line-height:1.65; color:#C8DECF; margin:0;">Every gift supports the ministry of Mapleview — teaching the Word, caring for kids and youth, serving Lakeside, and sending support to missionaries around the world. Questions about giving? Email <a href="#" style="color:#F7F3E9; text-decoration:underline;">office@mapleviewchurch.com</a>.</p>
+      </div>
+      <div style="height:300px; border-radius:24px; background:repeating-linear-gradient(45deg, rgba(247,243,233,0.08) 0px, rgba(247,243,233,0.08) 12px, rgba(247,243,233,0.03) 12px, rgba(247,243,233,0.03) 24px), rgba(247,243,233,0.05); border:1px solid rgba(247,243,233,0.16); display:flex; align-items:center; justify-content:center;">
+        <span style="font-family:monospace; font-size:14px; color:#9CC7A8;">[ photo: serving / missions ]</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- footer -->
+  <div style="background:#26241F; color:#B8B2A3; padding:48px; display:flex; justify-content:space-between; align-items:center; gap:36px; flex-wrap:wrap;">
+    <div style="display:flex; align-items:center; gap:14px;">
+      <img src="assets/logo.png" alt="" style="width:42px; height:42px;">
+      <div style="font-size:15px; line-height:1.5;"><span style="font-family:'DM Serif Display',serif; font-size:18px; color:#F7F3E9;">Mapleview Baptist Church</span><br>13176 Mapleview St, Lakeside, CA 92040</div>
+    </div>
+    <div style="display:flex; gap:28px; font-size:15px; font-weight:600;">
+      <a href="About.dc.html" style="color:#B8B2A3;">About</a>
+      <a href="Gatherings.dc.html" style="color:#B8B2A3;">Gatherings</a>
+      <a href="Ministries.dc.html" style="color:#B8B2A3;">Ministries</a>
+      <a href="Sermons.dc.html" style="color:#B8B2A3;">Sermons</a>
+      <a href="Give.dc.html" style="color:#B8B2A3;">Give</a>
+    </div>
+    <div style="font-size:15px; text-align:right; line-height:1.6;">(619) 443-6467<br>office@mapleviewchurch.com</div>
+  </div>
+</div>
+</x-dc>
+</body>
+</html>
