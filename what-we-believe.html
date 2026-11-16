@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&display=swap" rel="stylesheet">
+  <style>
+    body { margin: 0; background: #111410; }
+    html { scroll-behavior: smooth; }
+    a { color: #F3EEE3; text-decoration: none; }
+    a:hover { color: #C9A36A; }
+  </style>
+</helmet>
+
+<div data-screen-label="What We Believe (Bold)" style="background:#F3EEE3; color:#111410; font-family:'Archivo',sans-serif; font-stretch:100%;">
+
+  <div style="position:relative; min-height:clamp(460px, 66vh, 660px); display:flex; flex-direction:column; color:#F3EEE3; overflow:hidden; background:#111410;">
+    <img src="assets/photos/Reading-Bible-1.jpg" alt="" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:50% 40%;">
+    <div style="position:absolute; inset:0; background:linear-gradient(180deg, rgba(10,12,9,0.62) 0%, rgba(10,12,9,0.3) 32%, rgba(10,12,9,0.62) 62%, rgba(10,12,9,0.92) 100%);"></div>
+
+    <div style="position:relative; z-index:2; display:flex; align-items:center; justify-content:space-between; gap:20px; flex-wrap:wrap; padding:22px clamp(20px, 4vw, 56px);">
+      <a href="index.html" style="display:flex; align-items:center; gap:12px; color:#F3EEE3;">
+        <span style="width:48px; height:48px; border-radius:999px; background:#F3EEE3; display:grid; place-items:center; flex:none;"><img src="assets/logo.png" alt="Mapleview tree logo" style="width:36px; height:36px;"></span>
+        <span style="font-weight:800; font-stretch:80%; font-size:19px; letter-spacing:0.04em; text-transform:uppercase; line-height:1.05;">Mapleview<br>Baptist Church</span>
+      </a>
+      <div style="display:flex; align-items:center; gap:clamp(16px, 2.4vw, 34px); flex-wrap:wrap; font-size:14px; font-weight:700; letter-spacing:0.1em; text-transform:uppercase;">
+        <a href="about.html" style="color:#F3EEE3; border-bottom:2px solid #C9A36A; padding-bottom:3px;">About</a>
+        <a href="gatherings.html" style="color:#F3EEE3;">Gatherings</a>
+        <a href="ministries.html" style="color:#F3EEE3;">Ministries</a>
+        <a href="sermons.html" style="color:#F3EEE3;">Sermons</a>
+        <a href="give.html" style="background:#F3EEE3; color:#111410; padding:11px 22px; border-radius:999px;">Give</a>
+      </div>
+    </div>
+    <div style="position:relative; flex:1; display:flex; flex-direction:column; justify-content:flex-end; padding:48px clamp(20px, 4vw, 56px) clamp(36px, 5vw, 64px);">
+      <a href="about.html" style="font-size:13px; font-weight:800; letter-spacing:0.16em; text-transform:uppercase; color:#C9A36A; margin-bottom:14px; align-self:flex-start;">Statement of faith</a>
+      <h1 style="font-weight:900; font-stretch:72%; text-transform:uppercase; font-size:clamp(44px, 6.4vw, 104px); line-height:0.9; margin:0;">What we believe</h1>
+      <p style="font-size:clamp(16px, 1.3vw, 19px); line-height:1.55; margin:22px 0 0; max-width:56ch; color:rgba(243,238,227,0.92);">We foremost believe that God loves you — and that you can know God and experience His love through a personal relationship with Jesus Christ.</p>
+    </div>
+  </div>
+  <div style="background:#F3EEE3; color:#111410; padding:clamp(56px, 7vw, 104px) clamp(20px, 4vw, 56px); display:flex; flex-wrap:wrap; gap:40px clamp(32px, 5vw, 80px); align-items:flex-start;">
+    <div style="flex:0 1 260px; position:sticky; top:24px;">
+      <div style="font-size:13px; font-weight:800; letter-spacing:0.16em; text-transform:uppercase; color:#2E6B45; margin-bottom:14px;">Contents</div>
+      <div style="display:flex; flex-direction:column;">
+        <a href="#scriptures" style="color:#111410; font-size:15px; font-weight:700; padding:9px 0; border-top:1px solid #CFC6B2;">The Scriptures</a>
+        <a href="#trinity" style="color:#111410; font-size:15px; font-weight:700; padding:9px 0; border-top:1px solid #CFC6B2;">The Trinity</a>
+        <a href="#father" style="color:#111410; font-size:15px; font-weight:700; padding:9px 0; border-top:1px solid #CFC6B2;">God the Father</a>
+        <a href="#jesus" style="color:#111410; font-size:15px; font-weight:700; padding:9px 0; border-top:1px solid #CFC6B2;">Jesus Christ</a>
+        <a href="#spirit" style="color:#111410; font-size:15px; font-weight:700; padding:9px 0; border-top:1px solid #CFC6B2;">The Holy Spirit</a>
+        <a href="#man" style="color:#111410; font-size:15px; font-weight:700; padding:9px 0; border-top:1px solid #CFC6B2;">Man</a>
+        <a href="#salvation" style="color:#111410; font-size:15px; font-weight:700; padding:9px 0; border-top:1px solid #CFC6B2;">Salvation</a>
+        <a href="#satan" style="color:#111410; font-size:15px; font-weight:700; padding:9px 0; border-top:1px solid #CFC6B2;">Satan</a>
+        <a href="#last-things" style="color:#111410; font-size:15px; font-weight:700; padding:9px 0; border-top:1px solid #CFC6B2;">The Last Things</a>
+        <a href="#church" style="color:#111410; font-size:15px; font-weight:700; padding:9px 0; border-top:1px solid #CFC6B2;">The Church</a>
+        <a href="#baptism" style="color:#111410; font-size:15px; font-weight:700; padding:9px 0; border-top:1px solid #CFC6B2;">Baptism</a>
+        <a href="#lords-supper" style="color:#111410; font-size:15px; font-weight:700; padding:9px 0; border-top:1px solid #CFC6B2;">The Lord's Supper</a>
+        <a href="#sanctity" style="color:#111410; font-size:15px; font-weight:700; padding:9px 0; border-top:1px solid #CFC6B2;">Sanctity of Human Life</a>
+        <a href="#marriage" style="color:#111410; font-size:15px; font-weight:700; padding:9px 0; border-top:1px solid #CFC6B2;">Sexuality &amp; Marriage</a>
+      </div>
+    </div>
+    <div style="flex:1 1 520px; max-width:820px; display:flex; flex-direction:column; gap:28px;">
+    <div id="scriptures" style="border-top:2px solid #111410; padding:28px 0 12px; scroll-margin-top:24px;">
+      <h2 style="font-weight:900; font-stretch:72%; text-transform:uppercase; font-size:clamp(26px, 2.6vw, 36px); line-height:0.95; margin:0 0 16px; color:#111410;">Concerning the Scriptures</h2>
+      <p style="font-size:17px; line-height:1.7; color:#2A2823; margin:0 0 14px;">We believe that the Bible is God's infallible, inerrant word. It was written by men who were divinely and uniquely inspired, and that it is our supreme and final authority in all matters of faith and practice. We affirm our belief in the verbal and plenary inspiration of the Scripture in their original manuscripts.</p>
+      <div style="font-size:13.5px; line-height:1.6; color:#2E6B45; font-weight:800;">II Tim. 3:16; II Peter 1:21; Matt. 5:17,18</div>
+    </div>
+
+    <div id="trinity" style="border-top:2px solid #111410; padding:28px 0 12px; scroll-margin-top:24px;">
+      <h2 style="font-weight:900; font-stretch:72%; text-transform:uppercase; font-size:clamp(26px, 2.6vw, 36px); line-height:0.95; margin:0 0 16px; color:#111410;">Concerning the Trinity</h2>
+      <p style="font-size:17px; line-height:1.7; color:#2A2823; margin:0 0 14px;">We believe there is one living and true God, eternally existing in three persons, Father, Son and Holy Spirit; that these are equal in every divine perfection and that they execute distinct but harmonious offices in the work of creation, providence and redemption.</p>
+      <div style="font-size:13.5px; line-height:1.6; color:#2E6B45; font-weight:800;">Isaiah 43:10-11; Mark 12:29-32; John 1:1; John 10:30; Phil. 2:6; I Tim. 3:16; James 2:19; Mark 1:9-11; Acts 5:3,4; II Cor. 13:14; Eph. 4:6</div>
+    </div>
+
+    <div id="father" style="border-top:2px solid #111410; padding:28px 0 12px; scroll-margin-top:24px;">
+      <h2 style="font-weight:900; font-stretch:72%; text-transform:uppercase; font-size:clamp(26px, 2.6vw, 36px); line-height:0.95; margin:0 0 16px; color:#111410;">Concerning God, the Father</h2>
+      <p style="font-size:17px; line-height:1.7; color:#2A2823; margin:0 0 14px;">We believe in God the Father, an infinite, personal Spirit; perfect in Holiness, wisdom, power and love. We believe that He concerns Himself mercifully in the affairs of men, that He hears and answers prayer and that He saves from sin and spiritual death all who come to Him through Jesus Christ.</p>
+      <div style="font-size:13.5px; line-height:1.6; color:#2E6B45; font-weight:800;">John 4:24; John 3:16,17</div>
+    </div>
+
+    <div id="jesus" style="border-top:2px solid #111410; padding:28px 0 12px; scroll-margin-top:24px;">
+      <h2 style="font-weight:900; font-stretch:72%; text-transform:uppercase; font-size:clamp(26px, 2.6vw, 36px); line-height:0.95; margin:0 0 16px; color:#111410;">Concerning Jesus Christ</h2>
+      <p style="font-size:17px; line-height:1.7; color:#2A2823; margin:0 0 14px;">We believe in Jesus Christ, God's only begotten Son, conceived by the Holy Spirit. We believe in His virgin birth, sinless life, miracles and teachings. We believe in His substitutionary atoning death for the sins of all mankind, bodily resurrection, ascension into Heaven, perpetual intercession for His people and His personal, premillennial, and imminent return for His Church.</p>
+      <div style="font-size:13.5px; line-height:1.6; color:#2E6B45; font-weight:800;">Is. 7:14; John 1:14; John 8:58; I Cor. 15:3-6; I John 1:7; II Cor. 5:21; Acts 1:9-11; Heb. 7:25; I Thess. 4:13-17; I Thess. 5:9; John 14:1-6; I John 2:2; Phil. 2:6-11; Rev. 3:10</div>
+    </div>
+
+    <div id="spirit" style="border-top:2px solid #111410; padding:28px 0 12px; scroll-margin-top:24px;">
+      <h2 style="font-weight:900; font-stretch:72%; text-transform:uppercase; font-size:clamp(26px, 2.6vw, 36px); line-height:0.95; margin:0 0 16px; color:#111410;">Concerning the Holy Spirit</h2>
+      <p style="font-size:17px; line-height:1.7; color:#2A2823; margin:0 0 14px;">We believe that the Holy Spirit possesses all the divine attributes and is equal with God the Father and God the Son in nature and essence. We believe that He is active in the regeneration of the lost and indwells every believer, baptizing them into the body of Christ at salvation and seals them unto the Day of Redemption. We believe that He never takes His departure from the Church, nor from the feeblest of Saints, but is ever present to testify of Christ and seeks to continually fill for power, teaching and service those who are yielded to His will. We believe in His relation to the unbelieving world, He restrains the evil one until God's purpose is fulfilled; that He convicts of sin, of righteousness and of judgment; and that He bears witness to the truth of the Gospel in preaching and testimony.</p>
+      <div style="font-size:13.5px; line-height:1.6; color:#2E6B45; font-weight:800; margin-bottom:18px;">John 14:16-17, 26; Acts 4:8,31; John 16:7-11; Acts 5:30-32; John 3:5-6; Eph. 1:13-14; Acts 11:16; Rom. 8:9, 25-27; I Cor. 12:13; Eph. 4:30; Eph. 5:17-21; II Thess. 2:7</div>
+      <p style="font-size:17px; line-height:1.7; color:#2A2823; margin:0 0 14px;">We believe that the Holy Spirit is the giver of spiritual gifts and that He distributes to each believer according to His will. However, we believe that some gifts of the Holy Spirit such as the gift of speaking in tongues and the gift of miraculous healings were temporary. We believe that speaking in tongues was never the common or necessary sign of baptism nor the filling of the Spirit and that the promised final deliverance of the body from sickness or death awaits the consummation of our salvation in the Resurrection.</p>
+      <div style="font-size:13.5px; line-height:1.6; color:#2E6B45; font-weight:800;">I Cor. 12:11, 27-30; Rom. 8:22-23; I Cor. 13:8; I Cor. 14:21-23; Heb. 2:4</div>
+    </div>
+
+    <div id="man" style="border-top:2px solid #111410; padding:28px 0 12px; scroll-margin-top:24px;">
+      <h2 style="font-weight:900; font-stretch:72%; text-transform:uppercase; font-size:clamp(26px, 2.6vw, 36px); line-height:0.95; margin:0 0 16px; color:#111410;">Concerning Man</h2>
+      <p style="font-size:17px; line-height:1.7; color:#2A2823; margin:0 0 14px;">We believe that God created man in His own image for the purpose of glorifying Himself through voluntary worship and service, that man sinned and thereby incurred not only physical death, but also spiritual death which is separation from God.</p>
+      <div style="font-size:13.5px; line-height:1.6; color:#2E6B45; font-weight:800;">Gen. 1:27; 2:17; 3:6; Rom. 5:12; Phil. 2:11; Ps. 51:5; Job 14:4; 15:14; Eph. 2:1-3</div>
+    </div>
+
+    <div id="salvation" style="border-top:2px solid #111410; padding:28px 0 12px; scroll-margin-top:24px;">
+      <h2 style="font-weight:900; font-stretch:72%; text-transform:uppercase; font-size:clamp(26px, 2.6vw, 36px); line-height:0.95; margin:0 0 16px; color:#111410;">Concerning Salvation</h2>
+      <p style="font-size:17px; line-height:1.7; color:#2A2823; margin:0 0 14px;">We believe that all men are sinners by nature and by choice and are, therefore, under condemnation. We believe that salvation is wholly of grace; that all who confess and repent of their sins and who received by faith the Lord Jesus Christ as their Savior are born-again of the Holy Spirit and thereby become the Children of God, eternally secure in Christ. This acceptance of Jesus Christ as their savior is an act of the will in response to the convicting work of the Holy Spirit through the Word of God and is not the result of works, baptism or church membership.</p>
+      <div style="font-size:13.5px; line-height:1.6; color:#2E6B45; font-weight:800;">Eph. 2:8-9; John 3:16; Heb. 7:25; Rom. 3:23; 6:23; John 3:14-18; Rom. 10:9</div>
+    </div>
+
+    <div id="satan" style="border-top:2px solid #111410; padding:28px 0 12px; scroll-margin-top:24px;">
+      <h2 style="font-weight:900; font-stretch:72%; text-transform:uppercase; font-size:clamp(26px, 2.6vw, 36px); line-height:0.95; margin:0 0 16px; color:#111410;">Concerning Satan</h2>
+      <p style="font-size:17px; line-height:1.7; color:#2A2823; margin:0 0 14px;">We believe in the personal existence of Satan, the author of sin, a liar from the beginning who is still working in the world to destroy the souls of men and that he and all his angels and all who do not receive Christ as their Savior will be eternally punished in the Lake of Fire.</p>
+      <div style="font-size:13.5px; line-height:1.6; color:#2E6B45; font-weight:800;">Is. 14:12-15; Rev. 20:10-15; II Cor. 4:3-4</div>
+    </div>
+
+    <div id="last-things" style="border-top:2px solid #111410; padding:28px 0 12px; scroll-margin-top:24px;">
+      <h2 style="font-weight:900; font-stretch:72%; text-transform:uppercase; font-size:clamp(26px, 2.6vw, 36px); line-height:0.95; margin:0 0 16px; color:#111410;">Concerning the Last Things</h2>
+      <p style="font-size:17px; line-height:1.7; color:#2A2823; margin:0 0 14px;">We believe in the personal, premillennial and imminent return of Jesus Christ to rapture the Church. We believe in the second Advent of Christ, at which time He will return with His saints to establish His Kingdom and reign in power and glory. We believe in the bodily resurrection of the just and the unjust; the everlasting blessedness of the saved and the final judgment and endless conscious suffering of the lost.</p>
+      <div style="font-size:13.5px; line-height:1.6; color:#2E6B45; font-weight:800;">I Thess. 4:16-17; II Thess. 2:7-12; I Cor. 15:50-58; John 5:28-29; Rev. 20:1-15; Rev. 19:11-16; Zech. 14:4-11</div>
+    </div>
+
+    <div id="church" style="border-top:2px solid #111410; padding:28px 0 12px; scroll-margin-top:24px;">
+      <h2 style="font-weight:900; font-stretch:72%; text-transform:uppercase; font-size:clamp(26px, 2.6vw, 36px); line-height:0.95; margin:0 0 16px; color:#111410;">Concerning the Church</h2>
+      <p style="font-size:17px; line-height:1.7; color:#2A2823; margin:0 0 14px;">We believe in the universal church, a living spiritual body of which Christ is the head and of which all regenerated people are members with identical spiritual standing in the sight of God. We believe that a local church is an autonomous and independent company of believers in Jesus Christ, baptized on a credible profession of faith, voluntarily united together for worship, fellowship, edification and service. We believe that to these local churches are committed for perpetual observance, the ordinances of Baptism and the Lord's Supper; and that God has laid upon these churches the mission of proclaiming to a lost world, the Gospel of Jesus Christ.</p>
+      <div style="font-size:13.5px; line-height:1.6; color:#2E6B45; font-weight:800;">Eph. 5:22-32; Matt. 16:16-18; 28:18-20; Rom. 12:3-5; Col. 3:9-11; I Pet. 2:9; Eph. 4:11-17; Acts 2:42; Acts 15:19-31</div>
+    </div>
+
+    <div id="baptism" style="border-top:2px solid #111410; padding:28px 0 12px; scroll-margin-top:24px;">
+      <h2 style="font-weight:900; font-stretch:72%; text-transform:uppercase; font-size:clamp(26px, 2.6vw, 36px); line-height:0.95; margin:0 0 16px; color:#111410;">Concerning Baptism</h2>
+      <p style="font-size:17px; line-height:1.7; color:#2A2823; margin:0 0 14px;">We believe that Christian Baptism is the immersion of a believer in water as an outward expression of our faith in the crucified, buried and risen Savior, and is also an expression of our death to sin and resurrection to a new life.</p>
+      <div style="font-size:13.5px; line-height:1.6; color:#2E6B45; font-weight:800;">Acts 8:36-39; Rom. 6:3-5</div>
+    </div>
+
+    <div id="lords-supper" style="border-top:2px solid #111410; padding:28px 0 12px; scroll-margin-top:24px;">
+      <h2 style="font-weight:900; font-stretch:72%; text-transform:uppercase; font-size:clamp(26px, 2.6vw, 36px); line-height:0.95; margin:0 0 16px; color:#111410;">Concerning the Lord's Supper</h2>
+      <p style="font-size:17px; line-height:1.7; color:#2A2823; margin:0 0 14px;">We believe the Lord's Supper is a memorial service proclaiming in a sacred and symbolic manner, the death of the Lord Jesus Christ on our behalf, and speaks of the communion of believers in the unity of His body. The emblems used are not literally the body and blood of Christ, nor do they contain His flesh and blood, but are simply symbols. Participation is for all believers who after self-examination in the light of the Word combined with confession, seek to obey the Lord in this observance.</p>
+      <div style="font-size:13.5px; line-height:1.6; color:#2E6B45; font-weight:800;">I Cor. 11:23-30; Matt. 26:26-30; I Cor. 10:16</div>
+    </div>
+
+    <div id="sanctity" style="border-top:2px solid #111410; padding:28px 0 12px; scroll-margin-top:24px;">
+      <h2 style="font-weight:900; font-stretch:72%; text-transform:uppercase; font-size:clamp(26px, 2.6vw, 36px); line-height:0.95; margin:0 0 16px; color:#111410;">Concerning the Sanctity of Human Life</h2>
+      <p style="font-size:17px; line-height:1.7; color:#2A2823; margin:0 0 14px;">We believe that man was created in the image of God, and in creation he has been made only a little lower than the Angels, thus the life of man is precious in the sight of God. We believe that life is a gift of God, beginning at the moment of conception and that the taking of innocent life is a crime against God and man.</p>
+      <div style="font-size:13.5px; line-height:1.6; color:#2E6B45; font-weight:800;">Gen. 1:26-28; Ps. 8</div>
+    </div>
+
+    <div id="marriage" style="border-top:2px solid #111410; padding:28px 0 12px; scroll-margin-top:24px;">
+      <h2 style="font-weight:900; font-stretch:72%; text-transform:uppercase; font-size:clamp(26px, 2.6vw, 36px); line-height:0.95; margin:0 0 16px; color:#111410;">Concerning Human Sexuality and Marriage</h2>
+      <p style="font-size:17px; line-height:1.7; color:#2A2823; margin:0 0 14px;">We believe that legitimate sexual relations are exercised solely within marriage. Hence, sexual activities, such as, but not limited to, adultery, fornication, incest, homosexuality, and pedophilia are inconsistent with the teachings of the Bible and the Church. Further, lascivious behavior, the creation and/or viewing of pornography, and efforts to alter one's gender, are incompatible with the biblical witness. We believe marriage has been established by God for the good of mankind. This church recognizes marriage as exclusively the spiritual and legal union of one man and one woman and is intended to be a lifetime commitment.</p>
+      <div style="font-size:13.5px; line-height:1.6; color:#2E6B45; font-weight:800;">Gen. 2:24; Matthew 5:28; 19:4-6</div>
+    </div>
+    </div>
+  </div>
+  <div style="background:#111410; color:#F3EEE3; padding:clamp(56px, 7vw, 104px) clamp(20px, 4vw, 56px);">
+    <div style="display:flex; justify-content:space-between; align-items:center; gap:32px; flex-wrap:wrap;">
+      <div style="flex:1 1 420px;">
+        <h2 style="font-weight:900; font-stretch:72%; text-transform:uppercase; font-size:clamp(36px, 4.4vw, 68px); line-height:0.92; margin:0 0 12px; color:#F3EEE3;">Questions about what we believe?</h2>
+        <p style="font-size:17px; line-height:1.6; color:rgba(243,238,227,0.82); margin:0;">We'd love to talk. Come visit, or reach out anytime.</p>
+      </div>
+      <div style="display:flex; gap:12px; flex-wrap:wrap;"><a href="gatherings.html" style="display:inline-block; background:#F3EEE3; color:#111410; font-weight:800; font-size:14px; letter-spacing:0.1em; text-transform:uppercase; padding:16px 28px; border-radius:999px;">Visit info</a><a href="about.html" style="display:inline-block; border:1.5px solid rgba(243,238,227,0.6); color:#F3EEE3; font-weight:800; font-size:14px; letter-spacing:0.1em; text-transform:uppercase; padding:15px 26px; border-radius:999px;">Back to About</a></div>
+    </div>
+  </div>
+
+  <div style="background:#111410; color:#A8A396; padding:clamp(48px, 6vw, 72px) clamp(20px, 4vw, 56px) 32px;">
+    <div style="font-weight:900; font-stretch:72%; text-transform:uppercase; font-size:clamp(44px, 7vw, 112px); line-height:0.85; color:#F3EEE3; letter-spacing:-0.01em;">Mapleview</div>
+    <div style="display:flex; justify-content:space-between; gap:32px; flex-wrap:wrap; margin-top:36px; padding-top:28px; border-top:1px solid rgba(243,238,227,0.15); font-size:15px; line-height:1.6;">
+      <div>13176 Mapleview St<br>Lakeside, CA 92040</div>
+      <div style="display:flex; gap:24px; flex-wrap:wrap; font-size:13px; font-weight:800; letter-spacing:0.12em; text-transform:uppercase;">
+        <a href="about.html">About</a>
+        <a href="gatherings.html">Gatherings</a>
+        <a href="ministries.html">Ministries</a>
+        <a href="sermons.html">Sermons</a>
+        <a href="give.html">Give</a>
+      </div>
+      <div>(619) 443-6467<br>office@mapleviewchurch.com</div>
+    </div>
+  </div>
+</div>
+</x-dc>
+</body>
+</html>

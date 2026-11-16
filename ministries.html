@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&display=swap" rel="stylesheet">
+  <style>
+    body { margin: 0; background: #111410; }
+    html { scroll-behavior: smooth; }
+    a { color: #F3EEE3; text-decoration: none; }
+    a:hover { color: #C9A36A; }
+  </style>
+</helmet>
+
+<div data-screen-label="Ministries (Bold)" style="background:#F3EEE3; color:#111410; font-family:'Archivo',sans-serif; font-stretch:100%;">
+
+  <div style="position:relative; min-height:clamp(460px, 66vh, 660px); display:flex; flex-direction:column; color:#F3EEE3; overflow:hidden; background:#111410;">
+    <img src="assets/photos/Congregation-1.jpg" alt="" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:50% 40%;">
+    <div style="position:absolute; inset:0; background:linear-gradient(180deg, rgba(10,12,9,0.62) 0%, rgba(10,12,9,0.3) 32%, rgba(10,12,9,0.62) 62%, rgba(10,12,9,0.92) 100%);"></div>
+
+    <div style="position:relative; z-index:2; display:flex; align-items:center; justify-content:space-between; gap:20px; flex-wrap:wrap; padding:22px clamp(20px, 4vw, 56px);">
+      <a href="index.html" style="display:flex; align-items:center; gap:12px; color:#F3EEE3;">
+        <span style="width:48px; height:48px; border-radius:999px; background:#F3EEE3; display:grid; place-items:center; flex:none;"><img src="assets/logo.png" alt="Mapleview tree logo" style="width:36px; height:36px;"></span>
+        <span style="font-weight:800; font-stretch:80%; font-size:19px; letter-spacing:0.04em; text-transform:uppercase; line-height:1.05;">Mapleview<br>Baptist Church</span>
+      </a>
+      <div style="display:flex; align-items:center; gap:clamp(16px, 2.4vw, 34px); flex-wrap:wrap; font-size:14px; font-weight:700; letter-spacing:0.1em; text-transform:uppercase;">
+        <a href="about.html" style="color:#F3EEE3;">About</a>
+        <a href="gatherings.html" style="color:#F3EEE3;">Gatherings</a>
+        <a href="ministries.html" style="color:#F3EEE3; border-bottom:2px solid #C9A36A; padding-bottom:3px;">Ministries</a>
+        <a href="sermons.html" style="color:#F3EEE3;">Sermons</a>
+        <a href="give.html" style="background:#F3EEE3; color:#111410; padding:11px 22px; border-radius:999px;">Give</a>
+      </div>
+    </div>
+    <div style="position:relative; flex:1; display:flex; flex-direction:column; justify-content:flex-end; padding:48px clamp(20px, 4vw, 56px) clamp(36px, 5vw, 64px);">
+      <div style="font-size:13px; font-weight:800; letter-spacing:0.16em; text-transform:uppercase; color:#C9A36A; margin-bottom:14px;">Every age and season</div>
+      <h1 style="font-weight:900; font-stretch:72%; text-transform:uppercase; font-size:clamp(44px, 6.4vw, 104px); line-height:0.9; margin:0;">Ministries</h1>
+      <p style="font-size:clamp(16px, 1.3vw, 19px); line-height:1.55; margin:22px 0 0; max-width:56ch; color:rgba(243,238,227,0.92);">From Kids Club to men's and women's studies to missions around the world — every ministry exists to help you know God and make Him known.</p>
+    </div>
+  </div>
+  <div style="display:flex; flex-wrap:wrap; gap:4px; background:#F3EEE3; padding-top:4px;">
+    <a href="children.html" style="position:relative; display:block; flex:1 1 420px; height:clamp(400px, 40vw, 580px); overflow:hidden; color:#F3EEE3;">
+      <img src="assets/photos/Kids-1.jpg" alt="Children" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover;">
+      <div style="position:absolute; inset:0; background:linear-gradient(180deg, rgba(10,12,9,0) 25%, rgba(10,12,9,0.55) 55%, rgba(10,12,9,0.92) 100%);"></div>
+      <div style="position:absolute; left:28px; right:28px; bottom:28px;">
+        <div style="font-size:12.5px; font-weight:800; letter-spacing:0.16em; text-transform:uppercase; color:#C9A36A; margin-bottom:8px;">Sundays 9:00 AM · Wednesdays 6:00 PM</div>
+        <div style="font-weight:900; font-stretch:72%; text-transform:uppercase; font-size:clamp(36px, 3.6vw, 56px); line-height:0.92;">Children</div>
+        <div style="font-size:16px; line-height:1.5; margin:10px 0 16px; max-width:40ch; color:rgba(243,238,227,0.9);">Kids Club and Sunday classes where little ones meet a big God through songs, games, and Bible lessons.</div>
+        <span style="font-size:13px; font-weight:800; letter-spacing:0.12em; text-transform:uppercase; border-bottom:2px solid #F3EEE3; padding-bottom:3px;">Learn more</span>
+      </div>
+    </a>
+    <a href="youth.html" style="position:relative; display:block; flex:1 1 420px; height:clamp(400px, 40vw, 580px); overflow:hidden; color:#F3EEE3;">
+      <img src="assets/photos/Youth-1.jpg" alt="Youth" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover;">
+      <div style="position:absolute; inset:0; background:linear-gradient(180deg, rgba(10,12,9,0) 25%, rgba(10,12,9,0.55) 55%, rgba(10,12,9,0.92) 100%);"></div>
+      <div style="position:absolute; left:28px; right:28px; bottom:28px;">
+        <div style="font-size:12.5px; font-weight:800; letter-spacing:0.16em; text-transform:uppercase; color:#C9A36A; margin-bottom:8px;">Jr. High Wed 6:00 PM · High School Tue 6:00 PM</div>
+        <div style="font-weight:900; font-stretch:72%; text-transform:uppercase; font-size:clamp(36px, 3.6vw, 56px); line-height:0.92;">Youth</div>
+        <div style="font-size:16px; line-height:1.5; margin:10px 0 16px; max-width:40ch; color:rgba(243,238,227,0.9);">Two weekly groups where students build real faith and real friendships.</div>
+        <span style="font-size:13px; font-weight:800; letter-spacing:0.12em; text-transform:uppercase; border-bottom:2px solid #F3EEE3; padding-bottom:3px;">Learn more</span>
+      </div>
+    </a>
+    <a href="women.html" style="position:relative; display:block; flex:1 1 420px; height:clamp(400px, 40vw, 580px); overflow:hidden; color:#F3EEE3;">
+      <img src="assets/photos/Womens-group-1.jpg" alt="Women" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover;">
+      <div style="position:absolute; inset:0; background:linear-gradient(180deg, rgba(10,12,9,0) 25%, rgba(10,12,9,0.55) 55%, rgba(10,12,9,0.92) 100%);"></div>
+      <div style="position:absolute; left:28px; right:28px; bottom:28px;">
+        <div style="font-size:12.5px; font-weight:800; letter-spacing:0.16em; text-transform:uppercase; color:#C9A36A; margin-bottom:8px;">Wednesdays 6:00 PM</div>
+        <div style="font-weight:900; font-stretch:72%; text-transform:uppercase; font-size:clamp(36px, 3.6vw, 56px); line-height:0.92;">Women</div>
+        <div style="font-size:16px; line-height:1.5; margin:10px 0 16px; max-width:40ch; color:rgba(243,238,227,0.9);">A midweek Bible study where women encourage one another and go deep in the Word.</div>
+        <span style="font-size:13px; font-weight:800; letter-spacing:0.12em; text-transform:uppercase; border-bottom:2px solid #F3EEE3; padding-bottom:3px;">Learn more</span>
+      </div>
+    </a>
+    <a href="men.html" style="position:relative; display:block; flex:1 1 420px; height:clamp(400px, 40vw, 580px); overflow:hidden; color:#F3EEE3;">
+      <img src="assets/photos/Mens-group-2.jpg" alt="Men" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover;">
+      <div style="position:absolute; inset:0; background:linear-gradient(180deg, rgba(10,12,9,0) 25%, rgba(10,12,9,0.55) 55%, rgba(10,12,9,0.92) 100%);"></div>
+      <div style="position:absolute; left:28px; right:28px; bottom:28px;">
+        <div style="font-size:12.5px; font-weight:800; letter-spacing:0.16em; text-transform:uppercase; color:#C9A36A; margin-bottom:8px;">Wednesdays 6:00 PM</div>
+        <div style="font-weight:900; font-stretch:72%; text-transform:uppercase; font-size:clamp(36px, 3.6vw, 56px); line-height:0.92;">Men</div>
+        <div style="font-size:16px; line-height:1.5; margin:10px 0 16px; max-width:40ch; color:rgba(243,238,227,0.9);">Men sharpening men through honest conversation and careful study of Scripture.</div>
+        <span style="font-size:13px; font-weight:800; letter-spacing:0.12em; text-transform:uppercase; border-bottom:2px solid #F3EEE3; padding-bottom:3px;">Learn more</span>
+      </div>
+    </a>
+    <a href="discipleship.html" style="position:relative; display:block; flex:1 1 420px; height:clamp(400px, 40vw, 580px); overflow:hidden; color:#F3EEE3;">
+      <img src="assets/photos/Guys-1on1-1.jpg" alt="Discipleship" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover;">
+      <div style="position:absolute; inset:0; background:linear-gradient(180deg, rgba(10,12,9,0) 25%, rgba(10,12,9,0.55) 55%, rgba(10,12,9,0.92) 100%);"></div>
+      <div style="position:absolute; left:28px; right:28px; bottom:28px;">
+        <div style="font-size:12.5px; font-weight:800; letter-spacing:0.16em; text-transform:uppercase; color:#C9A36A; margin-bottom:8px;">Ongoing</div>
+        <div style="font-weight:900; font-stretch:72%; text-transform:uppercase; font-size:clamp(36px, 3.6vw, 56px); line-height:0.92;">Discipleship</div>
+        <div style="font-size:16px; line-height:1.5; margin:10px 0 16px; max-width:40ch; color:rgba(243,238,227,0.9);">One-on-one and small-group relationships that help every believer take the next step.</div>
+        <span style="font-size:13px; font-weight:800; letter-spacing:0.12em; text-transform:uppercase; border-bottom:2px solid #F3EEE3; padding-bottom:3px;">Learn more</span>
+      </div>
+    </a>
+    <a href="missions.html" style="position:relative; display:block; flex:1 1 420px; height:clamp(400px, 40vw, 580px); overflow:hidden; color:#F3EEE3;">
+      <img src="assets/photos/Older-Couple-1.jpg" alt="Missions" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover;">
+      <div style="position:absolute; inset:0; background:linear-gradient(180deg, rgba(10,12,9,0) 25%, rgba(10,12,9,0.55) 55%, rgba(10,12,9,0.92) 100%);"></div>
+      <div style="position:absolute; left:28px; right:28px; bottom:28px;">
+        <div style="font-size:12.5px; font-weight:800; letter-spacing:0.16em; text-transform:uppercase; color:#C9A36A; margin-bottom:8px;">Local & global</div>
+        <div style="font-weight:900; font-stretch:72%; text-transform:uppercase; font-size:clamp(36px, 3.6vw, 56px); line-height:0.92;">Missions</div>
+        <div style="font-size:16px; line-height:1.5; margin:10px 0 16px; max-width:40ch; color:rgba(243,238,227,0.9);">Supporting missionaries near and far as we share His love one person at a time.</div>
+        <span style="font-size:13px; font-weight:800; letter-spacing:0.12em; text-transform:uppercase; border-bottom:2px solid #F3EEE3; padding-bottom:3px;">Learn more</span>
+      </div>
+    </a>
+  </div>
+  <div style="background:#2E6B45; color:#F3EEE3; padding:clamp(56px, 7vw, 104px) clamp(20px, 4vw, 56px);">
+    <div style="display:flex; justify-content:space-between; align-items:center; gap:32px; flex-wrap:wrap;">
+      <div style="flex:1 1 420px;">
+        <h2 style="font-weight:900; font-stretch:72%; text-transform:uppercase; font-size:clamp(36px, 4.4vw, 68px); line-height:0.92; margin:0 0 12px; color:#F3EEE3;">Kids Club registration is open</h2>
+        <p style="font-size:17px; line-height:1.6; color:rgba(243,238,227,0.85); margin:0;">Wednesday evenings at 6:00 PM — games, songs, and Bible lessons kids love.</p>
+      </div>
+      <a href="https://mapleviewchurchvbs.churchcenter.com/registrations/events/3121094" style="display:inline-block; background:#F3EEE3; color:#111410; font-weight:800; font-size:14px; letter-spacing:0.1em; text-transform:uppercase; padding:16px 28px; border-radius:999px;">Register your kids</a>
+    </div>
+  </div>
+
+  <div style="background:#111410; color:#A8A396; padding:clamp(48px, 6vw, 72px) clamp(20px, 4vw, 56px) 32px;">
+    <div style="font-weight:900; font-stretch:72%; text-transform:uppercase; font-size:clamp(44px, 7vw, 112px); line-height:0.85; color:#F3EEE3; letter-spacing:-0.01em;">Mapleview</div>
+    <div style="display:flex; justify-content:space-between; gap:32px; flex-wrap:wrap; margin-top:36px; padding-top:28px; border-top:1px solid rgba(243,238,227,0.15); font-size:15px; line-height:1.6;">
+      <div>13176 Mapleview St<br>Lakeside, CA 92040</div>
+      <div style="display:flex; gap:24px; flex-wrap:wrap; font-size:13px; font-weight:800; letter-spacing:0.12em; text-transform:uppercase;">
+        <a href="about.html">About</a>
+        <a href="gatherings.html">Gatherings</a>
+        <a href="ministries.html">Ministries</a>
+        <a href="sermons.html">Sermons</a>
+        <a href="give.html">Give</a>
+      </div>
+      <div>(619) 443-6467<br>office@mapleviewchurch.com</div>
+    </div>
+  </div>
+</div>
+</x-dc>
+</body>
+</html>

@@ -2,10 +2,245 @@
 <html>
 <head>
 <meta charset="utf-8">
-<meta http-equiv="refresh" content="0; url=Home.dc.html">
-<title>Mapleview Baptist Church</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
 </head>
 <body>
-<a href="Home.dc.html">Mapleview Baptist Church</a>
+<x-dc>
+<helmet>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+  <style>
+    body { margin: 0; background: #111410; }
+    a { color: #F3EEE3; text-decoration: none; }
+    a:hover { color: #C9A36A; }
+  </style>
+</helmet>
+
+<div data-screen-label="Home (Bold)" style="background:#F3EEE3; color:#111410; font-family:'Archivo',sans-serif; font-stretch:100%;">
+
+  <!-- hero -->
+  <div style="position:relative; min-height:max(640px, 94vh); display:flex; flex-direction:column; color:#F3EEE3; overflow:hidden;">
+    <sc-if value="{{ heroA }}" hint-placeholder-val="{{ true }}"><img src="assets/photos/Worship-2.jpg" alt="Congregation worshiping at Mapleview" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:50% 35%;"></sc-if>
+    <sc-if value="{{ heroB }}" hint-placeholder-val="{{ false }}"><img src="assets/photos/Sanctuary-1.jpg" alt="Congregation worshiping at Mapleview" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:50% 35%;"></sc-if>
+    <sc-if value="{{ heroC }}" hint-placeholder-val="{{ false }}"><img src="assets/photos/Worship-1-1.jpg" alt="Congregation worshiping at Mapleview" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:50% 35%;"></sc-if>
+    <sc-if value="{{ heroD }}" hint-placeholder-val="{{ false }}"><img src="assets/photos/Congregation-1.jpg" alt="Congregation worshiping at Mapleview" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:50% 35%;"></sc-if>
+    <div style="position:absolute; inset:0; background:linear-gradient(180deg, rgba(10,12,9,0.6) 0%, rgba(10,12,9,0.3) 30%, rgba(10,12,9,0.6) 55%, rgba(10,12,9,0.9) 100%);"></div>
+
+    <div style="position:absolute; right:16px; top:50%; transform:translateY(-50%); z-index:3; display:flex; flex-direction:column; gap:4px; padding:4px; border-radius:999px; background:rgba(10,12,9,0.32); backdrop-filter:blur(8px); -webkit-backdrop-filter:blur(8px); border:1px solid rgba(243,238,227,0.18);">
+      <button onClick="{{ heroPick0 }}" style="{{ heroBtn0 }}" title="Photo 1">1</button>
+      <button onClick="{{ heroPick1 }}" style="{{ heroBtn1 }}" title="Photo 2">2</button>
+      <button onClick="{{ heroPick2 }}" style="{{ heroBtn2 }}" title="Photo 3">3</button>
+      <button onClick="{{ heroPick3 }}" style="{{ heroBtn3 }}" title="Photo 4">4</button>
+    </div>
+    <sc-if value="{{ showAnnouncement }}" hint-placeholder-val="{{ true }}">
+      <div style="position:relative; background:#C9A36A; color:#111410; font-size:13px; font-weight:700; letter-spacing:0.08em; text-transform:uppercase; display:flex; justify-content:center; gap:14px; flex-wrap:wrap; padding:9px 20px;">
+        <span>This week's bulletin is ready</span>
+        <a href="#" style="color:#111410; text-decoration:underline; text-underline-offset:3px;">Download PDF</a>
+      </div>
+    </sc-if>
+
+    <div style="position:relative; display:flex; align-items:center; justify-content:space-between; gap:20px; flex-wrap:wrap; padding:22px clamp(20px, 4vw, 56px);">
+      <a href="index.html" style="display:flex; align-items:center; gap:12px;">
+        <span style="width:48px; height:48px; border-radius:999px; background:#F3EEE3; display:grid; place-items:center; flex:none;"><img src="assets/logo.png" alt="Mapleview tree logo" style="width:36px; height:36px;"></span>
+        <span style="font-weight:800; font-stretch:80%; font-size:19px; letter-spacing:0.04em; text-transform:uppercase; line-height:1.05;">Mapleview<br>Baptist Church</span>
+      </a>
+      <div style="display:flex; align-items:center; gap:clamp(16px, 2.4vw, 34px); flex-wrap:wrap; font-size:14px; font-weight:700; letter-spacing:0.1em; text-transform:uppercase;">
+        <a href="about.html">About</a>
+        <a href="gatherings.html">Gatherings</a>
+        <a href="ministries.html">Ministries</a>
+        <a href="sermons.html">Sermons</a>
+        <a href="give.html" style="background:#F3EEE3; color:#111410; padding:11px 22px; border-radius:999px;">Give</a>
+      </div>
+    </div>
+
+    <div style="position:relative; flex:1; display:flex; flex-direction:column; justify-content:flex-end; padding:0 max(72px, clamp(20px, 4vw, 56px)) clamp(28px, 4vw, 48px) clamp(20px, 4vw, 56px);">
+      <div style="font-size:13px; font-weight:800; letter-spacing:0.16em; text-transform:uppercase; color:#F3EEE3; margin-bottom:18px;">Mapleview Baptist Church · Lakeside, CA</div>
+      <h1 style="font-weight:900; font-stretch:72%; text-transform:uppercase; font-size:clamp(44px, 6.4vw, 104px); line-height:0.9; letter-spacing:-0.005em; margin:0; display:flex; flex-direction:column;"><span>Discover God.</span><span>Walk fearlessly.</span><span style="color:#C9A36A;">Share His love.</span></h1>
+      <div style="display:flex; justify-content:space-between; align-items:end; gap:28px; flex-wrap:wrap; margin-top:clamp(24px, 3vw, 40px); padding-top:24px; border-top:1px solid rgba(243,238,227,0.3);">
+        <p style="font-size:clamp(16px, 1.3vw, 19px); line-height:1.55; margin:0; max-width:48ch; color:rgba(243,238,227,0.92);">We're a family of Christ-followers in Lakeside, learning God's Word verse by verse and sharing His love one person at a time. Come as you are.</p>
+        <div style="display:flex; gap:12px; flex-wrap:wrap;">
+          <a href="gatherings.html" style="background:#F3EEE3; color:#111410; font-weight:800; font-size:14px; letter-spacing:0.1em; text-transform:uppercase; padding:17px 30px; border-radius:999px;">Plan your visit</a>
+          <a href="sermons.html" style="border:1.5px solid rgba(243,238,227,0.6); color:#F3EEE3; font-weight:800; font-size:14px; letter-spacing:0.1em; text-transform:uppercase; padding:16px 28px; border-radius:999px;">Watch a service</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- sunday times -->
+  <div style="background:#2E6B45; color:#F3EEE3; padding:clamp(48px, 6vw, 88px) clamp(20px, 4vw, 56px);">
+    <div style="display:flex; flex-wrap:wrap; gap:clamp(28px, 4vw, 56px); align-items:end;">
+      <div style="flex:1 1 320px;">
+        <div style="font-size:13px; font-weight:800; letter-spacing:0.16em; text-transform:uppercase; color:#A9D3B4; margin-bottom:14px;">Every Sunday</div>
+        <div style="font-weight:900; font-stretch:72%; text-transform:uppercase; font-size:clamp(34px, 3.4vw, 48px); line-height:0.95;">Join us Sunday</div>
+        <a href="https://maps.google.com/?q=13176+Mapleview+St,+Lakeside,+CA+92040" target="_blank" rel="noopener" style="display:inline-block; margin-top:16px; font-size:16px; font-weight:600; border-bottom:1px solid rgba(243,238,227,0.5); padding-bottom:2px;">13176 Mapleview St, Lakeside, CA 92040</a>
+      </div>
+      <div style="flex:2 1 440px; display:flex; flex-wrap:wrap; gap:clamp(20px, 3vw, 44px);">
+      <div style="flex:1 1 190px; border-left:1px solid rgba(243,238,227,0.25); padding-left:clamp(20px, 2.4vw, 36px);">
+        <div style="font-weight:900; font-stretch:72%; font-size:clamp(52px, 5.2vw, 84px); line-height:0.85;">9:00<span style="font-size:0.38em; font-stretch:100%; margin-left:6px;">AM</span></div>
+        <div style="font-size:14px; font-weight:800; letter-spacing:0.14em; text-transform:uppercase; margin-top:12px; color:#A9D3B4;">Bible Studies · All ages</div>
+      </div>
+      <div style="flex:1 1 190px; border-left:1px solid rgba(243,238,227,0.25); padding-left:clamp(20px, 2.4vw, 36px);">
+        <div style="font-weight:900; font-stretch:72%; font-size:clamp(52px, 5.2vw, 84px); line-height:0.85;">10:30<span style="font-size:0.38em; font-stretch:100%; margin-left:6px;">AM</span></div>
+        <div style="font-size:14px; font-weight:800; letter-spacing:0.14em; text-transform:uppercase; margin-top:12px; color:#A9D3B4;">Worship Service</div>
+      </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- weekly strip -->
+  <div style="background:#F3EEE3; padding:clamp(40px, 5vw, 64px) clamp(20px, 4vw, 56px); border-bottom:1px solid #DCD4C2;">
+    <div style="display:flex; justify-content:space-between; align-items:baseline; gap:16px; flex-wrap:wrap; margin-bottom:24px;">
+      <div style="font-size:13px; font-weight:800; letter-spacing:0.16em; text-transform:uppercase; color:#4A4740;">During the week</div>
+      <a href="gatherings.html" style="color:#111410; font-size:14px; font-weight:800; letter-spacing:0.12em; text-transform:uppercase; border-bottom:2px solid #111410; padding-bottom:3px;">Full schedule</a>
+    </div>
+    <div style="display:flex; flex-wrap:wrap; gap:24px 32px;">
+      <div style="flex:1 1 220px; border-top:2px solid #111410; padding-top:16px;">
+        <div style="font-size:12.5px; font-weight:800; letter-spacing:0.16em; text-transform:uppercase; color:#2E6B45; margin-bottom:8px;">Monday · 9:30 AM</div>
+        <div style="font-size:19px; font-weight:700;">Prayer Meeting</div>
+      </div>
+      <div style="flex:1 1 220px; border-top:2px solid #111410; padding-top:16px;">
+        <div style="font-size:12.5px; font-weight:800; letter-spacing:0.16em; text-transform:uppercase; color:#2E6B45; margin-bottom:8px;">Tuesday · 6:00 PM</div>
+        <div style="font-size:19px; font-weight:700;">High School Youth</div>
+      </div>
+      <div style="flex:1 1 220px; border-top:2px solid #111410; padding-top:16px;">
+        <div style="font-size:12.5px; font-weight:800; letter-spacing:0.16em; text-transform:uppercase; color:#2E6B45; margin-bottom:8px;">Wednesday · 6:00 PM</div>
+        <div style="font-size:19px; font-weight:700;">Kids Club · Jr. High · Men's &amp; Women's Studies</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ministries: full-bleed tiles -->
+  <div style="background:#F3EEE3; padding:clamp(56px, 7vw, 104px) clamp(20px, 4vw, 56px) clamp(28px, 3vw, 40px); display:flex; justify-content:space-between; align-items:end; gap:24px; flex-wrap:wrap;">
+    <h2 style="font-weight:900; font-stretch:72%; text-transform:uppercase; font-size:clamp(40px, 4.6vw, 72px); line-height:0.9; margin:0;">Ministries</h2>
+    <a href="ministries.html" style="color:#111410; font-size:14px; font-weight:800; letter-spacing:0.12em; text-transform:uppercase; border-bottom:2px solid #111410; padding-bottom:3px;">All ministries</a>
+  </div>
+  <div style="display:flex; flex-wrap:wrap; gap:4px; background:#F3EEE3;">
+    <a href="children.html" style="position:relative; display:block; flex:1 1 300px; height:clamp(420px, 44vw, 620px); overflow:hidden; color:#F3EEE3;">
+      <img src="assets/photos/Kids-1.jpg" alt="Kids Club" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover;">
+      <div style="position:absolute; inset:0; background:linear-gradient(180deg, rgba(10,12,9,0) 25%, rgba(10,12,9,0.55) 55%, rgba(10,12,9,0.92) 100%);"></div>
+      <div style="position:absolute; left:28px; right:28px; bottom:28px;">
+        <div style="font-size:12.5px; font-weight:800; letter-spacing:0.16em; text-transform:uppercase; color:#C9A36A; margin-bottom:8px;">Pre-K – 5th</div>
+        <div style="font-weight:900; font-stretch:72%; text-transform:uppercase; font-size:clamp(32px, 3vw, 46px); line-height:0.92;">Children</div>
+        <div style="font-size:16px; line-height:1.5; margin-top:10px; max-width:34ch; color:rgba(243,238,227,0.9);">Kids Club and Sunday classes where little ones meet a big God.</div>
+      </div>
+    </a>
+    <a href="youth.html" style="position:relative; display:block; flex:1 1 300px; height:clamp(420px, 44vw, 620px); overflow:hidden; color:#F3EEE3;">
+      <img src="assets/photos/Youth-1.jpg" alt="Youth group" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover;">
+      <div style="position:absolute; inset:0; background:linear-gradient(180deg, rgba(10,12,9,0) 25%, rgba(10,12,9,0.55) 55%, rgba(10,12,9,0.92) 100%);"></div>
+      <div style="position:absolute; left:28px; right:28px; bottom:28px;">
+        <div style="font-size:12.5px; font-weight:800; letter-spacing:0.16em; text-transform:uppercase; color:#C9A36A; margin-bottom:8px;">6th – 12th</div>
+        <div style="font-weight:900; font-stretch:72%; text-transform:uppercase; font-size:clamp(32px, 3vw, 46px); line-height:0.92;">Youth</div>
+        <div style="font-size:16px; line-height:1.5; margin-top:10px; max-width:34ch; color:rgba(243,238,227,0.9);">Junior high and high school groups building real faith and real friendships.</div>
+      </div>
+    </a>
+    <a href="ministries.html" style="position:relative; display:block; flex:1 1 300px; height:clamp(420px, 44vw, 620px); overflow:hidden; color:#F3EEE3;">
+      <img src="assets/photos/Womens-group-1.jpg" alt="Women's Bible study" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover;">
+      <div style="position:absolute; inset:0; background:linear-gradient(180deg, rgba(10,12,9,0) 25%, rgba(10,12,9,0.55) 55%, rgba(10,12,9,0.92) 100%);"></div>
+      <div style="position:absolute; left:28px; right:28px; bottom:28px;">
+        <div style="font-size:12.5px; font-weight:800; letter-spacing:0.16em; text-transform:uppercase; color:#C9A36A; margin-bottom:8px;">Wednesdays</div>
+        <div style="font-weight:900; font-stretch:72%; text-transform:uppercase; font-size:clamp(32px, 3vw, 46px); line-height:0.92;">Men &amp; Women</div>
+        <div style="font-size:16px; line-height:1.5; margin-top:10px; max-width:34ch; color:rgba(243,238,227,0.9);">Midweek studies that go deep in the Word, side by side.</div>
+      </div>
+    </a>
+  </div>
+
+  <!-- sermon: full-bleed -->
+  <div style="position:relative; color:#F3EEE3; overflow:hidden; margin-top:4px;">
+    <sc-if value="{{ serA }}" hint-placeholder-val="{{ true }}"><img src="assets/photos/Preaching-4.jpg" alt="Pastor teaching" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:60% 35%;"></sc-if>
+    <sc-if value="{{ serB }}" hint-placeholder-val="{{ false }}"><img src="assets/photos/Preaching-3.jpg" alt="Pastor teaching" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:50% 30%;"></sc-if>
+    
+    <div style="position:absolute; right:16px; top:50%; transform:translateY(-50%); z-index:3; display:flex; flex-direction:column; gap:4px; padding:4px; border-radius:999px; background:rgba(10,12,9,0.32); backdrop-filter:blur(8px); -webkit-backdrop-filter:blur(8px); border:1px solid rgba(243,238,227,0.18);">
+      <button onClick="{{ serPick0 }}" style="{{ serBtn0 }}" title="Photo 1">1</button>
+      <button onClick="{{ serPick1 }}" style="{{ serBtn1 }}" title="Photo 2">2</button>
+    </div>
+    <div style="position:absolute; inset:0; background:linear-gradient(90deg, rgba(10,12,9,0.92) 0%, rgba(10,12,9,0.78) 45%, rgba(10,12,9,0.35) 100%);"></div>
+    <div style="position:relative; padding:clamp(64px, 8vw, 120px) max(72px, clamp(20px, 4vw, 56px)) clamp(64px, 8vw, 120px) clamp(20px, 4vw, 56px); display:grid; grid-template-columns:repeat(auto-fit, minmax(min(100%, 420px), 1fr)); gap:clamp(36px, 5vw, 72px); align-items:end;">
+      <div>
+        <div style="font-size:13px; font-weight:800; letter-spacing:0.16em; text-transform:uppercase; color:#C9A36A; margin-bottom:16px;">Latest message</div>
+        <h2 style="font-weight:900; font-stretch:72%; text-transform:uppercase; font-size:clamp(40px, 4.8vw, 76px); line-height:0.9; margin:0 0 16px;">Marching Orders</h2>
+        <div style="font-size:17px; color:rgba(243,238,227,0.85); margin-bottom:30px;">Joshua 6:1-14 · Pastor Jon Bones</div>
+        <div style="display:flex; gap:12px; flex-wrap:wrap; align-items:center;">
+          <a href="sermons.html" style="display:flex; align-items:center; gap:14px; background:#F3EEE3; color:#111410; font-weight:800; font-size:14px; letter-spacing:0.1em; text-transform:uppercase; padding:10px 28px 10px 10px; border-radius:999px;">
+            <span style="width:40px; height:40px; border-radius:999px; background:#2E6B45; color:#F3EEE3; display:grid; place-items:center; font-size:14px;">▶</span>Listen now
+          </a>
+          <a href="sermons.html" style="border:1.5px solid rgba(243,238,227,0.6); font-weight:800; font-size:14px; letter-spacing:0.1em; text-transform:uppercase; padding:18px 28px; border-radius:999px;">All sermons</a>
+        </div>
+      </div>
+      <div style="display:flex; flex-direction:column;">
+        <div style="font-size:12.5px; font-weight:800; letter-spacing:0.16em; text-transform:uppercase; color:rgba(243,238,227,0.6); padding-bottom:12px; border-bottom:1px solid rgba(243,238,227,0.25);">Recent</div>
+        <a href="sermons.html" style="display:flex; justify-content:space-between; align-items:center; gap:16px; padding:18px 0; border-bottom:1px solid rgba(243,238,227,0.25);">
+          <span><span style="display:block; font-size:19px; font-weight:700;">Whose Side Are You On?</span><span style="font-size:14.5px; color:rgba(243,238,227,0.7);">Joshua 5:10-15 · Jun 28</span></span>
+          <span style="font-size:14px;">▶</span>
+        </a>
+        <a href="sermons.html" style="display:flex; justify-content:space-between; align-items:center; gap:16px; padding:18px 0; border-bottom:1px solid rgba(243,238,227,0.25);">
+          <span><span style="display:block; font-size:19px; font-weight:700;">The Posture of Worship</span><span style="font-size:14.5px; color:rgba(243,238,227,0.7);">Selected Passages · Jun 14</span></span>
+          <span style="font-size:14px;">▶</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- seat for you: full-bleed -->
+  <div style="position:relative; min-height:clamp(420px, 46vw, 620px); display:flex; align-items:center; justify-content:center; text-align:center; color:#F3EEE3; overflow:hidden;">
+    <img src="assets/photos/Congregation-1.jpg" alt="Mapleview congregation" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover;">
+    <div style="position:absolute; inset:0; background:rgba(16,40,26,0.72);"></div>
+    <div style="position:relative; padding:64px clamp(20px, 4vw, 56px); display:flex; flex-direction:column; align-items:center;">
+      <div style="font-size:13px; font-weight:800; letter-spacing:0.16em; text-transform:uppercase; color:#C9A36A; margin-bottom:16px;">New here?</div>
+      <h2 style="font-weight:900; font-stretch:72%; text-transform:uppercase; font-size:clamp(40px, 5.2vw, 84px); line-height:0.9; margin:0 0 16px;">Plan your first visit</h2>
+      <p style="font-size:17px; line-height:1.6; margin:0 0 28px; color:rgba(243,238,227,0.9); max-width:46ch;">What to expect on Sunday, where to park, and what we have for your kids.</p>
+      <a href="gatherings.html" style="background:#F3EEE3; color:#111410; font-weight:800; font-size:14px; letter-spacing:0.1em; text-transform:uppercase; padding:18px 34px; border-radius:999px;">Visit info</a>
+    </div>
+  </div>
+
+  <!-- events + give -->
+  <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(min(100%, 420px), 1fr)); background:#F3EEE3;">
+    <div style="padding:clamp(48px, 6vw, 80px) clamp(20px, 4vw, 56px); border-right:1px solid #DCD4C2;">
+      <h3 style="font-weight:900; font-stretch:72%; text-transform:uppercase; font-size:clamp(32px, 3.2vw, 46px); line-height:0.92; margin:0 0 16px;">Events</h3>
+      <p style="font-size:17px; line-height:1.6; color:#4A4740; margin:0 0 26px; max-width:44ch;">Kids Club registration, church events, and this week's bulletin, all in one place.</p>
+      <div style="display:flex; gap:12px; flex-wrap:wrap;">
+        <a href="gatherings.html" style="background:#111410; color:#F3EEE3; font-weight:800; font-size:13.5px; letter-spacing:0.1em; text-transform:uppercase; padding:15px 26px; border-radius:999px;">Upcoming events</a>
+        <a href="#" style="border:1.5px solid #111410; color:#111410; font-weight:800; font-size:13.5px; letter-spacing:0.1em; text-transform:uppercase; padding:14px 24px; border-radius:999px;">Weekly bulletin</a>
+      </div>
+    </div>
+    <div style="padding:clamp(48px, 6vw, 80px) clamp(20px, 4vw, 56px); background:#C9A36A;">
+      <h3 style="font-weight:900; font-stretch:72%; text-transform:uppercase; font-size:clamp(32px, 3.2vw, 46px); line-height:0.92; margin:0 0 16px;">Give</h3>
+      <p style="font-size:17px; line-height:1.6; color:#2A241A; margin:0 0 26px; max-width:44ch;">Your generosity supports ministry in Lakeside and missions around the world.</p>
+      <a href="give.html" style="display:inline-block; background:#111410; color:#F3EEE3; font-weight:800; font-size:13.5px; letter-spacing:0.1em; text-transform:uppercase; padding:15px 26px; border-radius:999px;">Give online</a>
+    </div>
+  </div>
+
+  <!-- footer -->
+  <div style="background:#111410; color:#A8A396; padding:clamp(48px, 6vw, 72px) clamp(20px, 4vw, 56px) 32px;">
+    <div style="font-weight:900; font-stretch:72%; text-transform:uppercase; font-size:clamp(44px, 7vw, 112px); line-height:0.85; color:#F3EEE3; letter-spacing:-0.01em;">Mapleview</div>
+    <div style="display:flex; justify-content:space-between; gap:32px; flex-wrap:wrap; margin-top:36px; padding-top:28px; border-top:1px solid rgba(243,238,227,0.15); font-size:15px; line-height:1.6;">
+      <div>13176 Mapleview St<br>Lakeside, CA 92040</div>
+      <div style="display:flex; gap:24px; flex-wrap:wrap; font-size:13px; font-weight:800; letter-spacing:0.12em; text-transform:uppercase;">
+        <a href="about.html">About</a>
+        <a href="gatherings.html">Gatherings</a>
+        <a href="ministries.html">Ministries</a>
+        <a href="sermons.html">Sermons</a>
+        <a href="give.html">Give</a>
+      </div>
+      <div>(619) 443-6467<br>office@mapleviewchurch.com</div>
+    </div>
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;heroPhoto&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;Hands raised&quot;,&quot;Sanctuary&quot;,&quot;Worship team&quot;,&quot;Congregation&quot;],&quot;default&quot;:&quot;Hands raised&quot;,&quot;tsType&quot;:&quot;string&quot;},&quot;showAnnouncement&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;}}">
+class Component extends DCLogic {
+  state = { hero: null, ser: 0 };
+  renderVals() {
+    const names = ['Hands raised', 'Sanctuary', 'Worship team', 'Congregation'];
+    const hi = this.state.hero ?? Math.max(0, names.indexOf(this.props.heroPhoto));
+    const si = this.state.ser;
+    const btn = (on) => ({ appearance: 'none', cursor: 'pointer', border: 0, width: 30, height: 30, borderRadius: 999, font: "800 12.5px 'Archivo',sans-serif", background: on ? '#F3EEE3' : 'transparent', color: on ? '#111410' : 'rgba(243,238,227,0.85)' });
+    const v = { showAnnouncement: this.props.showAnnouncement ?? true };
+    ['A','B','C','D'].forEach((L, i) => { v['hero' + L] = hi === i; v['heroBtn' + i] = btn(hi === i); v['heroPick' + i] = () => this.setState({ hero: i }); });
+    ['A','B'].forEach((L, i) => { v['ser' + L] = si === i; v['serBtn' + i] = btn(si === i); v['serPick' + i] = () => this.setState({ ser: i }); });
+    return v;
+  }
+}
+</script>
 </body>
 </html>
